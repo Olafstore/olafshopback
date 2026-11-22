@@ -1,11 +1,11 @@
 /* v249: use the original main/store palettes from site-theme-picker.css.
    White remains disabled; retain layout and mobile fixes. */
 .site-theme-choices{grid-template-columns:repeat(2,minmax(0,1fr));}
-.site-theme-mini-swatches i:nth-child(1){background:#21457e;}
-.site-theme-mini-swatches i:nth-child(2){background:#07111e;}
+.site-theme-mini-swatches i:nth-child(1){background:#3d3d3d;}
+.site-theme-mini-swatches i:nth-child(2){background:#121212;}
 .site-theme-mini-swatches i:nth-child(3){display:none;}
-.site-theme-preview[data-palette=main]{--preview-bg:#071630;--preview-card:#17375f;--preview-bar:#528cf0;}
-.site-theme-preview[data-palette=store]{--preview-bg:#050a12;--preview-card:#142238;--preview-bar:#325278;}
+.site-theme-preview[data-palette=main]{--preview-bg:#1c1c1c;--preview-card:#3b3b3b;--preview-bar:#dbdbdb;}
+.site-theme-preview[data-palette=store]{--preview-bg:#050a12;--preview-card:#262626;--preview-bar:#4c4c4c;}
 html body #olaf-mobile-nav-toggle{position:relative!important;padding:0!important;}
 html body #olaf-mobile-nav-toggle>svg.mobile-menu-icon{position:absolute!important;inset:0!important;margin:auto!important;width:24px!important;height:24px!important;transform:none!important;translate:none!important;}
 .profile-live-preview{display:block;width:100%;min-height:420px;border:0;background:transparent;}
@@ -43,53 +43,53 @@ html body .atelier-dialog.is-profile-preview :is(.preview-profile-card,.portrait
 html body .atelier-dialog .preview-heading{top:-18px;background:var(--theme-panel)!important;border-bottom:1px solid var(--theme-edge);margin-bottom:14px;padding:12px 0;}
 html body .atelier-dialog .preview-heading :is(small,button){color:var(--theme-accent)!important;}
 html body .atelier-dialog .preview-heading button{background:var(--theme-control);border-color:var(--theme-edge);}
-html[data-site-theme=light]{--theme-base:#edf2f8;--theme-panel:#fff;--theme-panel-end:#f0f5fc;--theme-control:#e2ebf8;--theme-raised:#d9e6f7;--theme-edge:#bdcfe4;--theme-muted:#405675;--theme-accent:#164d8f;--text:#101d30;}
-html[data-site-theme=light] body{background:#edf2f8!important;color:#101d30!important;}
+html[data-site-theme=light]{--theme-base:#edf2f8;--theme-panel:#fff;--theme-panel-end:#f0f5fc;--theme-control:#dbdbdb;--theme-raised:#dbdbdb;--theme-edge:#dbdbdb;--theme-muted:#4c4c4c;--theme-accent:#4c4c4c;--text:#202020;}
+html[data-site-theme=light] body{background:#edf2f8!important;color:#dbdbdb!important;}
 /* Component surfaces, not opacity overlays: keep ink legible and shadows single. */
-html[data-site-theme=light] body :is(.search-discovery-item,.search-discovery-empty,.recent-purchase-row,#catalog-tag-categories>a){background:#e5eef9!important;border:1px solid #c0d2e8!important;box-shadow:none!important;color:#183858!important;}
-html[data-site-theme=light] body :is(.search-discovery-item,.search-discovery-empty,.recent-purchase-row,#catalog-tag-categories>a) :is(strong,small,span,b,time){color:#28496e!important;}
-html[data-site-theme=light] body :is(.search-discovery-item:hover,#catalog-tag-categories>a:hover,#catalog-tag-categories>a[aria-current=true]){background:#ccdef5!important;}
-html[data-site-theme=light] body :is(.olaf-steam-discovery-preview,.olaf-steam-taste-row){background:#f8fbff!important;border:1px solid #b9cde5!important;box-shadow:0 4px 14px #23476e0d!important;}
-html[data-site-theme=light] body .olaf-steam-discovery-preview :is(h3,h4,p,small,strong){color:#183858!important;}
-html[data-site-theme=light] body :is(.tag,.hover-preview-tags>span,.olaf-steam-discovery-preview .tags>span){background:#dce8f7!important;color:#25496f!important;border-color:#b9cee6!important;box-shadow:none!important;}
-html[data-site-theme=light] body :is(.olaf-steam-price-stack,.olaf-steam-editorial-price,.olaf-steam-activity-price,.olaf-sale-price){background:#e1ebf8!important;color:#152e4c!important;box-shadow:none!important;}
-html[data-site-theme=light] body :is(.olaf-steam-price-stack,.olaf-sale-price) :is(strong,b){color:#152e4c!important;}
-html[data-site-theme=light] body :is(.olaf-steam-price-stack,.olaf-sale-price) del{color:#51657e!important;}
-html[data-site-theme=light] body :is(.olaf-steam-deal-card,.olaf-steam-editorial-card,.catalog-genre-game){border:1px solid #b9cde5!important;box-shadow:0 3px 10px #23476e10!important;}
+html[data-site-theme=light] body :is(.search-discovery-item,.search-discovery-empty,.recent-purchase-row,#catalog-tag-categories>a){background:#e6e6e6!important;border:1px solid #4c4c4c!important;box-shadow:none!important;color:#dbdbdb!important;}
+html[data-site-theme=light] body :is(.search-discovery-item,.search-discovery-empty,.recent-purchase-row,#catalog-tag-categories>a) :is(strong,small,span,b,time){color:#dbdbdb!important;}
+html[data-site-theme=light] body :is(.search-discovery-item:hover,#catalog-tag-categories>a:hover,#catalog-tag-categories>a[aria-current=true]){background:#e6e6e6!important;}
+html[data-site-theme=light] body :is(.olaf-steam-discovery-preview,.olaf-steam-taste-row){background:#f8fbff!important;border:1px solid #4c4c4c!important;box-shadow:0 4px 14px rgba(72, 72, 72, 0.028)!important;}
+html[data-site-theme=light] body .olaf-steam-discovery-preview :is(h3,h4,p,small,strong){color:#dbdbdb!important;}
+html[data-site-theme=light] body :is(.tag,.hover-preview-tags>span,.olaf-steam-discovery-preview .tags>span){background:#e6e6e6!important;color:#dbdbdb!important;border-color:#4c4c4c!important;box-shadow:none!important;}
+html[data-site-theme=light] body :is(.olaf-steam-price-stack,.olaf-steam-editorial-price,.olaf-steam-activity-price,.olaf-sale-price){background:#e6e6e6!important;color:#dbdbdb!important;box-shadow:none!important;}
+html[data-site-theme=light] body :is(.olaf-steam-price-stack,.olaf-sale-price) :is(strong,b){color:#dbdbdb!important;}
+html[data-site-theme=light] body :is(.olaf-steam-price-stack,.olaf-sale-price) del{color:#dbdbdb!important;}
+html[data-site-theme=light] body :is(.olaf-steam-deal-card,.olaf-steam-editorial-card,.catalog-genre-game){border:1px solid #4c4c4c!important;box-shadow:0 3px 10px rgba(72, 72, 72, 0.035)!important;}
 html[data-site-theme=light] body :is(.hero-content,.catalog-genre-game,.olaf-steam-editorial-overlay) :is(h1,h2,h3,p,strong,small){color:#fff!important;-webkit-text-fill-color:#fff!important;text-shadow:0 1px 3px #0008;}
-html[data-site-theme=light] body .discord-floating-link>span{background:#565cf0!important;color:#fff!important;box-shadow:none!important;}
+html[data-site-theme=light] body .discord-floating-link>span{background:#3d3d3d!important;color:#fff!important;box-shadow:none!important;}
 html[data-site-theme=light] body .discord-floating-link svg{color:#fff!important;stroke:currentColor!important;}
-html[data-site-theme=light] body .topbar.site-topbar-unified :is(.mobile-nav-toggle,#open-auth,#open-notifications,#open-favorites){color:#234b78!important;background:#e1ebf8!important;box-shadow:none!important;}
+html[data-site-theme=light] body .topbar.site-topbar-unified :is(.mobile-nav-toggle,#open-auth,#open-notifications,#open-favorites){color:#dbdbdb!important;background:#e6e6e6!important;box-shadow:none!important;}
 html[data-site-theme=light] body :is(.topbar-search-wrap,.site-global-search,.store-search) :is(input,button){box-shadow:none!important;}
 html[data-site-theme=light] body :is(.topbar-search-wrap,.site-global-search,.store-search) input{border:0!important;background:transparent!important;}
 html[data-site-theme=light] body :is(.topbar-search-wrap,.store-search) .site-global-search{background:transparent!important;border:0!important;box-shadow:none!important;}
-html[data-site-theme=light] body :is(.olaf-steam-discovery-tabs button,.store-toolbar button,.olaf-steam-taste-actions a){background:#e0eafa!important;color:#22466e!important;border:1px solid #b9cde5!important;box-shadow:none!important;}
-html[data-site-theme=light] body :is(.olaf-steam-discovery-tabs button.is-active,.store-toolbar button[aria-pressed=true]){background:#245ab0!important;color:#fff!important;}
-html[data-site-theme=light] body :is(.store-featured-track,.store-product-grid,.olaf-steam-deal-track,.recent-purchases-list,#catalog-tag-categories){scrollbar-color:#8faacb #e3ebf6;}
+html[data-site-theme=light] body :is(.olaf-steam-discovery-tabs button,.store-toolbar button,.olaf-steam-taste-actions a){background:#e6e6e6!important;color:#dbdbdb!important;border:1px solid #4c4c4c!important;box-shadow:none!important;}
+html[data-site-theme=light] body :is(.olaf-steam-discovery-tabs button.is-active,.store-toolbar button[aria-pressed=true]){background:#3d3d3d!important;color:#fff!important;}
+html[data-site-theme=light] body :is(.store-featured-track,.store-product-grid,.olaf-steam-deal-track,.recent-purchases-list,#catalog-tag-categories){scrollbar-color:#3d3d3d #e6e6e6;}
 html[data-site-theme=light] body .store-market .store-product.atelier-portrait{display:grid;grid-template-rows:minmax(0,1fr) auto;aspect-ratio:auto!important;height:300px;}
 html[data-site-theme=light] body .store-market .store-product>img{min-height:0;height:100%;object-fit:cover;}
 html[data-site-theme=light] body .store-market .store-product::after{display:none;}
-html[data-site-theme=light] body .store-market .store-product-caption{position:relative;inset:auto;padding:12px 14px;background:#f7faff;border-top:1px solid #b9cde5;}
-html[data-site-theme=light] body :is(.store-topbar,.preview-heading,.store-toolbar,.store-search,.topbar-search-wrap,.site-global-search,.site-global-search-results,.olaf-mobile-search-card,.olaf-mobile-search-shell){background:#fff!important;border-color:#b9cce3!important;color:#142b48!important;box-shadow:0 5px 20px #244b7610;}
-html[data-site-theme=light] body :is(.store-topbar,.store-toolbar,.store-intro,.store-section-heading,.store-categories,.store-empty,.preview-heading,.atelier-dialog,.site-global-search-results,.olaf-mobile-search-shell) :is(p,small,strong,label,a,button,span){color:#203d61!important;}
-html[data-site-theme=light] body :is(.store-search,.site-global-search,.topbar-search-wrap,.olaf-mobile-search-shell) input{background:#f1f5fc!important;color:#101d30!important;border-color:#bccfe5!important;}
-html[data-site-theme=light] body input::placeholder{color:#506784!important;opacity:1;}
+html[data-site-theme=light] body .store-market .store-product-caption{position:relative;inset:auto;padding:12px 14px;background:#f7faff;border-top:1px solid #4c4c4c;}
+html[data-site-theme=light] body :is(.store-topbar,.preview-heading,.store-toolbar,.store-search,.topbar-search-wrap,.site-global-search,.site-global-search-results,.olaf-mobile-search-card,.olaf-mobile-search-shell){background:#fff!important;border-color:#4c4c4c!important;color:#dbdbdb!important;box-shadow:0 5px 20px rgba(77, 77, 77, 0.035);}
+html[data-site-theme=light] body :is(.store-topbar,.store-toolbar,.store-intro,.store-section-heading,.store-categories,.store-empty,.preview-heading,.atelier-dialog,.site-global-search-results,.olaf-mobile-search-shell) :is(p,small,strong,label,a,button,span){color:#dbdbdb!important;}
+html[data-site-theme=light] body :is(.store-search,.site-global-search,.topbar-search-wrap,.olaf-mobile-search-shell) input{background:#f1f5fc!important;color:#dbdbdb!important;border-color:#4c4c4c!important;}
+html[data-site-theme=light] body input::placeholder{color:#dbdbdb!important;opacity:1;}
 html[data-site-theme=light] body :is(.store-search,.site-global-search,.topbar-search-wrap,.olaf-mobile-search-shell) input{background:transparent!important;box-shadow:none!important;}
-html[data-site-theme=light] body :is(.store-topbar,.store-categories) [aria-pressed=true]{background:#dae7f8!important;color:#103f78!important;border-color:#6489b9!important;}
+html[data-site-theme=light] body :is(.store-topbar,.store-categories) [aria-pressed=true]{background:#e6e6e6!important;color:#dbdbdb!important;border-color:#4c4c4c!important;}
 html[data-site-theme=light] body :is(.store-market-content,.store-market.avatar-atelier){background:transparent!important;}
-html[data-site-theme=light] body .store-market .store-product.atelier-portrait{background:#dce7f5!important;border:1px solid #b3c8e1!important;box-shadow:0 4px 16px #1c47791a;}
-html[data-site-theme=light] body .store-product::after{background:linear-gradient(transparent,#edf4fbea 65%,#f7faff);}
-html[data-site-theme=light] body .store-market .store-product-caption :is(strong,small){color:#102f56!important;}
+html[data-site-theme=light] body .store-market .store-product.atelier-portrait{background:#e6e6e6!important;border:1px solid #4c4c4c!important;box-shadow:0 4px 16px rgba(74, 74, 74, 0.056);}
+html[data-site-theme=light] body .store-product::after{background:linear-gradient(transparent,rgba(230, 230, 230, 0.918) 65%,#f7faff);}
+html[data-site-theme=light] body .store-market .store-product-caption :is(strong,small){color:#dbdbdb!important;}
 html[data-site-theme=light] body .store-product-caption em{color:#086647!important;}
-html[data-site-theme=light] body .store-product-type{background:#eef5fff2;color:#173d6b;border-color:#b6cce7;}
-html[data-site-theme=light] body :is(.product-card,.game-card,.profile-sidebar-card,.member-stats,.member-games,.pd-section,.store-empty,.atelier-history){border-color:#b9cde5!important;box-shadow:0 5px 20px #31598315;}
-html[data-site-theme=light] body :is(.olaf-steam-kicker,.olaf-steam-section-head p,.section-heading>p,.eyebrow,.home-free-game-info small){color:#365d87!important;}
+html[data-site-theme=light] body .store-product-type{background:rgba(230, 230, 230, 0.949);color:#dbdbdb;border-color:#4c4c4c;}
+html[data-site-theme=light] body :is(.product-card,.game-card,.profile-sidebar-card,.member-stats,.member-games,.pd-section,.store-empty,.atelier-history){border-color:#4c4c4c!important;box-shadow:0 5px 20px rgba(90, 90, 90, 0.045);}
+html[data-site-theme=light] body :is(.olaf-steam-kicker,.olaf-steam-section-head p,.section-heading>p,.eyebrow,.home-free-game-info small){color:#dbdbdb!important;}
 /* Cover artwork stays dark; text on it needs light contrast, not dark ink. */
 html[data-site-theme=light] body #profile-overview-root .member-cover .member-identity h2{color:#f4f8ff!important;display:flex;align-items:center;flex-wrap:wrap;gap:8px;}
 html[data-site-theme=light] body #profile-overview-root .member-cover .member-bio textarea{background:transparent!important;color:#f4f8ff!important;-webkit-text-fill-color:#f4f8ff!important;box-shadow:none!important;border-color:transparent!important;}
-html[data-site-theme=light] body #profile-overview-root .member-cover .profile-level-ring{color:#142b48!important;}
-html[data-site-theme=light] body #profile-overview-root .member-cover .member-customize{color:#173d6b!important;}
-html[data-site-theme=light] body #profile-overview-root .profile-level-tip :is(span,small){color:#203d61!important;}
+html[data-site-theme=light] body #profile-overview-root .member-cover .profile-level-ring{color:#dbdbdb!important;}
+html[data-site-theme=light] body #profile-overview-root .member-cover .member-customize{color:#dbdbdb!important;}
+html[data-site-theme=light] body #profile-overview-root .profile-level-tip :is(span,small){color:#dbdbdb!important;}
 @media(max-width:760px){
  html body .topbar.site-topbar-unified .topbar-actions{gap:7px!important;}
  html body .topbar.site-topbar-unified :is(#open-notifications,#open-favorites){width:40px!important;height:40px!important;min-width:40px!important;min-height:40px!important;max-width:40px!important;max-height:40px!important;position:relative!important;overflow:visible!important;transform:none!important;}

@@ -1,7 +1,7 @@
 .software-root .sw-service-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:12px 0 0}
-.sw-service{display:flex;align-items:center;justify-content:center;gap:14px;min-height:58px;padding:10px 14px;border:1px solid #233d55;border-radius:8px;background:linear-gradient(120deg,#0b1e31,#0a1623)}
+.sw-service{display:flex;align-items:center;justify-content:center;gap:14px;min-height:58px;padding:10px 14px;border:1px solid #3c3c3c;border-radius:8px;background:linear-gradient(120deg,#1e1e1e,#161616)}
 .sw-service>img{width:30px;height:30px;flex-shrink:0;filter:invert(44%) sepia(94%) saturate(2870%) hue-rotate(177deg) brightness(110%)}
-.sw-service strong{display:block;font-size:12px;line-height:1.4;color:#eff6ff}.sw-service p{margin:2px 0 0;font-size:11px;line-height:1.4;color:#9bb5cf}
+.sw-service strong{display:block;font-size:12px;line-height:1.4;color:#f5f5f5}.sw-service p{margin:2px 0 0;font-size:11px;line-height:1.4;color:#c9c9c9}
 .sw-category-results{margin-top:28px;scroll-margin-top:90px}.sw-category-results[hidden]{display:none}
 @media(max-width:850px){body.software-store-page .software-root>.sw-hero-banner{overflow:visible}.software-root>.sw-hero-banner .sw-hero-actions{z-index:2}}
 .software-root .sw-categories button{display:flex;flex-direction:row;text-align:left;align-items:center;gap:20px;padding:10px 20px;min-width:0}

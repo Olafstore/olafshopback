@@ -3,7 +3,7 @@ html[data-site-theme] body.profile-store-page{
  --theme-base:#090a0c;--theme-panel:#121316;--theme-panel-end:#0d0e11;
  --theme-raised:#25262c;--theme-control:#1d1e23;--theme-accent:#d8dbe4;
  --theme-edge:#34363e;--theme-muted:#a2a5af;--theme-glow:transparent;
- --text:#f0f1f5;--text-secondary:#a2a5af;--brand:#8e8aaa;--accent:#c3bedf;
+ --text:#f0f1f5;--text-secondary:#a2a5af;--brand:#dbdbdb;--accent:#dbdbdb;
  --theme-card:linear-gradient(145deg,#15161a,#101115);
  --theme-button:linear-gradient(120deg,#2b2b33,#202127);
  background:#090a0c!important;color:var(--text)!important;

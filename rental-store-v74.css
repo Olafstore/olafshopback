@@ -1,7 +1,7 @@
 /* Rental patterns reuse the main shop's color, typography and surface tokens. */
 .rental-site #rental-main { width:min(100% - 40px,1400px); margin:24px auto 56px; color:var(--text); }
 .rental-site #rental-main * { box-sizing:border-box; }
-.rental-site .rental-hero { display:flex;justify-content:space-between;gap:32px;align-items:center;padding:38px 40px;border:1px solid var(--border-hover);border-radius:var(--radius);background:linear-gradient(90deg,rgba(6,16,34,.94),rgba(6,16,34,.64)),url('assets/rental-hero-v73.png') center/cover;overflow:hidden; }
+.rental-site .rental-hero { display:flex;justify-content:space-between;gap:32px;align-items:center;padding:38px 40px;border:1px solid var(--border-hover);border-radius:var(--radius);background:linear-gradient(90deg,rgba(20, 20, 20, 0.94),rgba(20, 20, 20, 0.64)),url('assets/rental-hero-v73.png') center/cover;overflow:hidden; }
 .rental-site .rental-kicker {color:var(--brand-hover);font-size:11px;font-weight:700;letter-spacing:1.5px;}
 .rental-site .rental-hero h1 {font-size:clamp(28px,3.2vw,46px);line-height:1.3;margin:12px 0;letter-spacing:-.5px;}
 .rental-site .rental-hero h1 span {color:var(--brand-hover);}
@@ -30,7 +30,7 @@
 .rental-site .rental-card-art {position:relative;display:block;aspect-ratio:460/215;overflow:hidden;background:var(--bg-elevated);}
 .rental-site .rental-card-art img {width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
 .rental-site .rental-card:hover img {transform:scale(1.03);}
-.rental-site .rental-card-badge {position:absolute;top:10px;left:10px;padding:4px 9px;border-radius:20px;font-size:10px;background:rgba(2,6,23,.85);color:#dbeafe;border:1px solid var(--border-hover);}
+.rental-site .rental-card-badge {position:absolute;top:10px;left:10px;padding:4px 9px;border-radius:20px;font-size:10px;background:rgba(12, 12, 12, 0.85);color:#f5f5f5;border:1px solid var(--border-hover);}
 .rental-site .rental-card-body {padding:17px;}.rental-site .rental-card-title {font-size:17px;font-weight:600;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:48px;line-height:1.4;}
 .rental-site .rental-card-genres,.rental-site .rental-card-hint {font-size:12px;color:var(--text-secondary);margin:7px 0;}.rental-site .rental-card-hint {margin-bottom:16px;}
 .rental-site .rental-card-cta {display:block;text-align:center;border-radius:var(--radius-sm);padding:10px 8px;background:var(--bg-elevated);border:1px solid var(--border-hover);color:var(--brand-hover);font-size:13px;}

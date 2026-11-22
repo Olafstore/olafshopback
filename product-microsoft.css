@@ -1,6 +1,6 @@
 /* Microsoft software detail pages only. Keep the shop's dark identity. */
 html[data-site-theme] body.product-detail-page.product-theme-windows #product-page {
-  --ms-panel:#101d2b; --ms-edge:#293d50; --ms-muted:#aabccc; --ms-blue:#0078d4;
+  --ms-panel:#1e1e1e; --ms-edge:#3c3c3c; --ms-muted:#dbdbdb; --ms-blue:#4c4c4c;
 }
 html[data-site-theme] body.product-theme-windows #product-page .pd-bg-backdrop {
   display:block!important;visibility:visible!important;opacity:.2!important;
@@ -17,10 +17,10 @@ html[data-site-theme] body.product-theme-windows #product-page .pd-brand-hero-wi
 .ms-detail-mark {display:grid;grid-template-columns:repeat(2,14px);gap:3px;flex:none;}
 .ms-detail-mark b {width:14px;height:14px;background:#f25022;}
 .ms-detail-mark b:nth-child(2) {background:#7fba00;}
-.ms-detail-mark b:nth-child(3) {background:#00a4ef;}
+.ms-detail-mark b:nth-child(3) {background:#3d3d3d;}
 .ms-detail-mark b:nth-child(4) {background:#ffb900;}
 html[data-site-theme] body.product-theme-windows #product-page .pd-brand-kicker {
-  color:#e7eff7;font-size:14px;font-weight:500;letter-spacing:.02em;text-transform:none;
+  color:#f5f5f5;font-size:14px;font-weight:500;letter-spacing:.02em;text-transform:none;
 }
 .ms-detail-heading small {display:block;font-size:11px;color:var(--ms-muted);margin-top:3px;}
 html[data-site-theme] body.product-theme-windows #product-page .pd-brand-hero h2 {
@@ -32,21 +32,21 @@ html[data-site-theme] body.product-theme-windows #product-page .pd-brand-hero p 
 }
 .ms-detail-steps {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;padding:22px 0 0;margin:26px 0 0;border-top:1px solid var(--ms-edge);}
 .ms-detail-steps li {display:flex;align-items:center;gap:12px;min-width:0;}
-.ms-detail-steps li>span {display:grid;place-items:center;flex:0 0 34px;height:34px;border:1px solid #365c7b;border-radius:6px;color:#72beff;font-size:12px;font-weight:600;}
-.ms-detail-steps strong {display:block;color:#e7eff7;font-size:13px;font-weight:500;}
+.ms-detail-steps li>span {display:grid;place-items:center;flex:0 0 34px;height:34px;border:1px solid #4c4c4c;border-radius:6px;color:#cdcdcd;font-size:12px;font-weight:600;}
+.ms-detail-steps strong {display:block;color:#f5f5f5;font-size:13px;font-weight:500;}
 .ms-detail-steps small {display:block;color:var(--ms-muted);font-size:11px;margin-top:3px;}
 html[data-site-theme] body.product-detail-page.product-theme-windows #product-page .pd-section {
   padding:24px!important;margin:20px 0 0;background:transparent!important;
   border:0!important;border-radius:0!important;box-shadow:none!important;
 }
 html[data-site-theme] body.product-theme-windows #product-page .pd-section-title {font-size:18px;font-weight:500;margin-bottom:20px;}
-html[data-site-theme] body.product-theme-windows #product-page .pd-description {color:#bdcbd9;line-height:1.9;}
+html[data-site-theme] body.product-theme-windows #product-page .pd-description {color:#dfdfdf;line-height:1.9;}
 html[data-site-theme] body.product-theme-windows #product-page .pd-sidebar-card {
   background:var(--ms-panel)!important;border:1px solid var(--ms-edge)!important;border-radius:12px!important;box-shadow:0 12px 32px #0002!important;
 }
 html[data-site-theme] body.product-theme-windows #product-page .pd-sidebar-body {padding:24px;}
 html[data-site-theme] body.product-theme-windows #product-page .pd-sidebar-title {font-size:23px;line-height:1.45;font-weight:600;}
-html[data-site-theme] body.product-theme-windows #product-page :is(.pd-hero-img,.pd-sidebar-cover,.pd-mobile-cover) {background:#0b1522!important;border:1px solid var(--ms-edge);border-radius:10px;overflow:hidden;}
+html[data-site-theme] body.product-theme-windows #product-page :is(.pd-hero-img,.pd-sidebar-cover,.pd-mobile-cover) {background:#161616!important;border:1px solid var(--ms-edge);border-radius:10px;overflow:hidden;}
 html[data-site-theme] body.product-theme-windows #product-page :is(.pd-hero-img,.pd-sidebar-cover,.pd-mobile-cover) img {object-fit:contain!important;object-position:center;width:100%;height:100%;}
 html[data-site-theme] body.product-theme-windows #product-page :is(.pd-hero-img,.pd-sidebar-cover,.pd-mobile-cover,.pd-thumb) {
   position:relative;aspect-ratio:16/9!important;height:auto!important;min-height:0!important;
@@ -60,36 +60,36 @@ html[data-site-theme] body.product-theme-windows #product-page :is(.pd-hero-img,
 html[data-site-theme] body.product-theme-windows #product-page .pd-price-main {color:#f1f6fc!important;font-size:36px;font-weight:600;}
 html[data-site-theme] body.product-theme-windows #product-page .pd-buy-btn {
   display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px;
-  background:var(--ms-blue)!important;border:1px solid #168de8!important;border-radius:6px!important;
+  background:var(--ms-blue)!important;border:1px solid #4c4c4c!important;border-radius:6px!important;
   box-shadow:none!important;color:white!important;font-weight:500;transition:background .18s ease,transform .18s ease;
 }
 html[data-site-theme] body.product-theme-windows #product-page .pd-buy-btn:disabled {opacity:.45;cursor:not-allowed;}
 html[data-site-theme] body.product-theme-windows #product-page .pd-buy-btn svg {width:20px;height:20px;flex:none;}
-html[data-site-theme] body.product-theme-windows #product-page :is(.pd-info-card,.pd-sysreq-panel,.pd-feature-item,.pd-package-option) {background:#0d1825!important;border:1px solid var(--ms-edge)!important;box-shadow:none!important;border-radius:8px!important;}
+html[data-site-theme] body.product-theme-windows #product-page :is(.pd-info-card,.pd-sysreq-panel,.pd-feature-item,.pd-package-option) {background:#191919!important;border:1px solid var(--ms-edge)!important;box-shadow:none!important;border-radius:8px!important;}
 /* Subtle glass information card; surrounding sections stay floating.
    Keep actionable package choices, buttons and stock badges visually distinct. */
 html[data-site-theme] body.product-detail-page.product-theme-windows #product-page .pd-info-card {
-  background:linear-gradient(135deg,rgba(156,207,255,.055),rgba(13,24,37,.12))!important;
-  border:1px solid rgba(185,215,244,.18)!important;border-radius:16px!important;
+  background:linear-gradient(135deg,rgba(230, 230, 230, 0.055),rgba(25, 25, 25, 0.12))!important;
+  border:1px solid rgba(76, 76, 76, 0.18)!important;border-radius:16px!important;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.045),0 12px 32px rgba(0,0,0,.1)!important;
   padding:8px 22px!important;
   -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
 }
 html[data-site-theme] body.product-detail-page.product-theme-windows #product-page .pd-info-row {
-  border-color:rgba(170,188,204,.12);
+  border-color:rgba(76, 76, 76, 0.12);
 }
 html[data-site-theme] body.product-detail-page.product-theme-windows #product-page .pd-related-card {
-  background:rgba(13,24,37,.35)!important;border:0!important;
+  background:rgba(25, 25, 25, 0.35)!important;border:0!important;
   box-shadow:0 8px 22px rgba(0,0,0,.16)!important;
   -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
 }
-html[data-site-theme] body.product-theme-windows #product-page .pd-package-option.is-selected {border-color:#4aa8ef!important;background:#102c43!important;}
+html[data-site-theme] body.product-theme-windows #product-page .pd-package-option.is-selected {border-color:#4c4c4c!important;background:#2a2a2a!important;}
 html[data-site-theme] body.product-theme-windows #product-page .pd-info-row {gap:20px;align-items:flex-start;border-color:var(--ms-edge);}
 html[data-site-theme] body.product-theme-windows #product-page .pd-info-row>strong {font-weight:500;line-height:1.7;}
 html[data-site-theme] body.product-theme-windows #product-page .pd-feature-text :is(strong,span) {white-space:normal;overflow:visible;text-overflow:clip;}
-html[data-site-theme] body.product-theme-windows #product-page :is(button,a,input):focus-visible {outline:2px solid #72beff;outline-offset:3px;}
+html[data-site-theme] body.product-theme-windows #product-page :is(button,a,input):focus-visible {outline:2px solid #4c4c4c;outline-offset:3px;}
 @media(hover:hover) and (pointer:fine) {
-  html[data-site-theme] body.product-theme-windows #product-page .pd-buy-btn:not(:disabled):hover {background:#106ebe!important;transform:translateY(-1px);}
+  html[data-site-theme] body.product-theme-windows #product-page .pd-buy-btn:not(:disabled):hover {background:#3d3d3d!important;transform:translateY(-1px);}
 }
 @media(max-width:760px) {
   html[data-site-theme] body.product-detail-page.product-theme-windows #product-page .pd-info-card {padding:6px 16px!important;border-radius:12px!important;}

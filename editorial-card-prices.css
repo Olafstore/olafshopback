@@ -1,7 +1,7 @@
 /* Home collections use the same title, tags and right-aligned price layout as discovery cards. */
 html body.home-page .olaf-steam-editorial-card {
  display:flex;flex-direction:column;min-width:0;border:0!important;border-radius:12px!important;
- background:rgba(10,21,40,.82)!important;
+ background:rgba(25, 25, 25, 0.82)!important;
 }
 html body.home-page .olaf-steam-editorial-card .olaf-steam-editorial-media {
  display:block;flex:none;aspect-ratio:2.1 / 1!important;border:0!important;border-radius:0!important;box-shadow:none;
@@ -10,7 +10,7 @@ html body.home-page .olaf-steam-editorial-card .editorial-product-details {
  display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto 1fr;
  flex:1;gap:10px;padding:12px;min-width:0;align-items:end;
 }
-html body.home-page .editorial-product-title {font-size:16px;line-height:1.5;color:#edf3ff;min-width:0;}
+html body.home-page .editorial-product-title {font-size:16px;line-height:1.5;color:#f5f5f5;min-width:0;}
 html body.home-page .editorial-product-details>.editorial-product-title {grid-column:1;grid-row:1;width:100%;}
 html body.home-page .editorial-product-details>.catalog-product-tags {grid-column:1;grid-row:2;}
 html body.home-page .editorial-product-title a {
@@ -18,32 +18,32 @@ html body.home-page .editorial-product-title a {
 }
 html body.home-page .olaf-steam-editorial-card .catalog-product-tags {display:flex;flex-wrap:wrap;gap:6px;min-width:0;}
 html body.home-page .olaf-steam-editorial-card .catalog-product-tags .tag {
- display:inline-block;max-width:100%;padding:2px 7px;border:1px solid #64748b38;border-radius:999px;
- background:#1e293b66;color:#a2afc2;font-size:10px;font-weight:400;line-height:1.5;text-decoration:none;overflow-wrap:anywhere;
+ display:inline-block;max-width:100%;padding:2px 7px;border:1px solid rgba(76, 76, 76, 0.22);border-radius:999px;
+ background:rgba(44, 44, 44, 0.4);color:#c6c6c6;font-size:10px;font-weight:400;line-height:1.5;text-decoration:none;overflow-wrap:anywhere;
 }
 html body.home-page .olaf-steam-editorial-card .catalog-product-tags .catalog-category-tag {
- background:var(--category-tag-bg,#183e68);border-color:var(--category-tag-border,#437fbc);color:var(--category-tag-text,#a8d8ff);font-weight:700;
+ background:var(--category-tag-bg,#404040);border-color:var(--category-tag-border,#4c4c4c);color:var(--category-tag-text,#e8e8e8);font-weight:700;
 }
 html body.home-page .editorial-product-details>.olaf-steam-price {
  grid-column:1!important;grid-row:3;
  justify-self:end;display:inline-flex;flex-wrap:nowrap;align-items:stretch;gap:0;
  width:max-content;min-width:0;max-width:100%;margin:0;padding:0;overflow:hidden;
- border:0;border-radius:0!important;background:#0a151e;
+ border:0;border-radius:0!important;background:#141414;
  font-family:'Segoe UI',Tahoma,sans-serif;font-variant-numeric:tabular-nums;text-shadow:none;
 }
 html body.home-page .editorial-product-details .olaf-steam-discount {
  min-width:50px;padding:6px 8px;background:#a4d235;color:#203000;font-size:15px;font-weight:700;
 }
 html body.home-page .editorial-product-details .olaf-steam-price-stack {min-width:0;gap:3px;padding:5px 8px;background:transparent;}
-html body.home-page .editorial-product-details .olaf-steam-price-stack strong {font-size:15px;font-weight:700;line-height:1.2;color:#dce8f0;}
-html body.home-page .editorial-product-details .olaf-steam-price-stack del {font-size:10px;line-height:1.2;color:#91a0b8;}
+html body.home-page .editorial-product-details .olaf-steam-price-stack strong {font-size:15px;font-weight:700;line-height:1.2;color:#f5f5f5;}
+html body.home-page .editorial-product-details .olaf-steam-price-stack del {font-size:10px;line-height:1.2;color:#b9b9b9;}
 /* Pin deal prices to the right edge without squeezing long stock labels. */
 html body.home-page .olaf-steam-deal-meta {width:100%;min-width:0;}
 html body.home-page .olaf-steam-deal-meta>.olaf-steam-price {margin-left:auto;flex:0 0 auto;}
 html body.home-page .olaf-steam-deal-meta>small {flex:1;padding-bottom:10px;}
 html body.home-page .olaf-steam-deal-body {padding-right:0;padding-bottom:0;}
 html body.home-page .olaf-steam-deal-name {padding-right:12px;}
-html body.home-page .olaf-steam-editorial-card a:focus-visible {outline:2px solid #8fc7ff;outline-offset:-2px;}
+html body.home-page .olaf-steam-editorial-card a:focus-visible {outline:2px solid #4c4c4c;outline-offset:-2px;}
 @media(max-width:640px){
  html body.home-page .olaf-steam-editorial-card .olaf-steam-editorial-media {aspect-ratio:16 / 9!important;}
  html body.home-page .olaf-steam-editorial-card .editorial-product-details {padding:10px;gap:8px;}

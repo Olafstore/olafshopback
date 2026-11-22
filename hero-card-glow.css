@@ -1,7 +1,7 @@
 /* Light accents only; retain the existing fan positions and carousel behavior. */
-body.home-page .hero-game-card:not(.hero-game-skeleton){border:1px solid #73baff66;box-shadow:0 18px 36px #0008,0 0 18px #168eff28,inset 0 1px 0 #d5efff55}
-body.home-page .hero-game-card:nth-child(3){border-color:#98d9ffaa;box-shadow:0 22px 42px #0009,0 0 26px #269dff55,0 0 7px #81dcff44}
-body.home-page .hero-game-card:hover,body.home-page .hero-game-card:focus-within{border-color:#a5e6ff;box-shadow:0 25px 44px #0008,0 0 32px #329fff77,inset 0 1px #e0f7ff99}
+body.home-page .hero-game-card:not(.hero-game-skeleton){border:1px solid rgba(76, 76, 76, 0.4);box-shadow:0 18px 36px #0008,0 0 18px rgba(128, 128, 128, 0.086),inset 0 1px 0 rgba(128, 128, 128, 0.183)}
+body.home-page .hero-game-card:nth-child(3){border-color:rgba(76, 76, 76, 0.667);box-shadow:0 22px 42px #0009,0 0 26px rgba(128, 128, 128, 0.183),0 0 7px rgba(128, 128, 128, 0.147)}
+body.home-page .hero-game-card:hover,body.home-page .hero-game-card:focus-within{border-color:#4c4c4c;box-shadow:0 25px 44px #0008,0 0 32px rgba(128, 128, 128, 0.257),inset 0 1px rgba(128, 128, 128, 0.33)}
 body.home-page .hero-game-card:not(.hero-game-skeleton)::before{animation:heroGameCardSheen 5.5s ease-in-out infinite;animation-delay:calc(var(--glow-delay,0)*1s);opacity:0}
 body.home-page .hero-game-card:nth-child(2){--glow-delay:1}
 body.home-page .hero-game-card:nth-child(3){--glow-delay:2}

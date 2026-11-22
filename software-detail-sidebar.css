@@ -1,14 +1,14 @@
 /* Right-hand information column, with a unified midnight-blue card palette. */
 html body.product-detail-page #product-page.software-detail .sd-price-legacy,html body.product-detail-page #product-page.software-detail .sd-price-source{display:none!important}
-html body.product-detail-page #product-page.software-detail .sd-price-choice{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:12px;padding:13px 15px;margin:14px 0;border:1px solid #159eff;border-radius:9px;background:linear-gradient(120deg,#0b2037,#0b1627);min-height:62px}
-.sd-choice-dot{width:20px;height:20px;border-radius:50%;background:#078cff;box-shadow:0 0 0 4px #123564;display:grid;place-items:center}
+html body.product-detail-page #product-page.software-detail .sd-price-choice{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:12px;padding:13px 15px;margin:14px 0;border:1px solid #4c4c4c;border-radius:9px;background:linear-gradient(120deg,#212121,#191919);min-height:62px}
+.sd-choice-dot{width:20px;height:20px;border-radius:50%;background:#3d3d3d;box-shadow:0 0 0 4px rgba(59, 59, 59, 0.55);display:grid;place-items:center}
 .sd-choice-dot:after{content:'';width:7px;height:7px;border-radius:50%;background:white}
-.sd-choice-copy{display:grid;gap:4px;min-width:0}.sd-choice-copy strong{font-size:13px;line-height:1.5}.sd-choice-copy small{font-size:11px;color:#acc2d9;line-height:1.5;overflow-wrap:anywhere}
+.sd-choice-copy{display:grid;gap:4px;min-width:0}.sd-choice-copy strong{font-size:13px;line-height:1.5}.sd-choice-copy small{font-size:11px;color:#d7d7d7;line-height:1.5;overflow-wrap:anywhere}
 html body.product-detail-page #product-page.software-detail .sd-price-choice .pd-price-main{font-size:18px;white-space:nowrap}
 html body.product-detail-page #product-page.software-detail .pd-package-option{min-height:62px;padding:12px 15px;gap:12px}
 html body.product-detail-page #product-page.software-detail .pd-package-copy strong{font-size:13px}
 html body.product-detail-page #product-page.software-detail .pd-package-meta b{font-size:18px;color:#f3f7ff}
-html body.product-detail-page #product-page.software-detail .pd-package-option.is-selected .pd-package-radio{background:#078cff;border:0;box-shadow:0 0 0 4px #123564;width:20px;height:20px;display:grid;place-items:center}
+html body.product-detail-page #product-page.software-detail .pd-package-option.is-selected .pd-package-radio{background:#3d3d3d;border:0;box-shadow:0 0 0 4px rgba(59, 59, 59, 0.55);width:20px;height:20px;display:grid;place-items:center}
 html body.product-detail-page #product-page.software-detail .pd-package-option.is-selected .pd-package-radio>*{display:none}
 html body.product-detail-page #product-page.software-detail .pd-package-option.is-selected .pd-package-radio:after{content:'';width:7px;height:7px;border-radius:50%;background:white}
 html body.product-detail-page #product-page.software-detail{max-width:1480px}
@@ -18,14 +18,14 @@ html body.product-detail-page #product-page.software-detail .sd-aside{grid-colum
 html body.product-detail-page #product-page.software-detail .sd-aside>.pd-section{grid-column:1;grid-row:auto;height:auto;margin:0!important;padding:18px!important;align-self:start}
 html body.product-detail-page #product-page.software-detail .sd-aside>.pd-section,
 html body.product-detail-page #product-page.software-detail .sd-details .pd-section,
-html body.product-detail-page #product-page.software-detail .sd-payment-panel{background:linear-gradient(145deg,#101c38,#0a1228)!important;border:1px solid #253759!important;border-radius:12px!important;box-shadow:0 8px 24px #02081930!important}
+html body.product-detail-page #product-page.software-detail .sd-payment-panel{background:linear-gradient(145deg,#242424,#191919)!important;border:1px solid #3f3f3f!important;border-radius:12px!important;box-shadow:0 8px 24px rgba(14, 14, 14, 0.104)!important}
 html body.product-detail-page #product-page.software-detail .sd-benefit-grid>div,
 html body.product-detail-page #product-page.software-detail .sd-payment-method,
-html body.product-detail-page #product-page.software-detail .pd-related-card{background:linear-gradient(140deg,#142442,#0c172e)!important;border:1px solid #294365!important;border-radius:9px}
-html body.product-detail-page #product-page.software-detail .pd-package-option{background:linear-gradient(120deg,#101e3a,#0b152b);border-color:#294365}
-html body.product-detail-page #product-page.software-detail .pd-package-option.is-selected{border-color:#279fff;background:linear-gradient(120deg,#102e50,#101c38);box-shadow:0 0 16px #168aff14}
-html body.product-detail-page #product-page.software-detail .sd-aside h3{display:flex;align-items:center;gap:5px;margin:0 0 12px;font-size:17px;color:#e6efff}
-html body.product-detail-page #product-page.software-detail .pd-info-row{padding:11px 0!important;border-color:#263a58}
+html body.product-detail-page #product-page.software-detail .pd-related-card{background:linear-gradient(140deg,#2b2b2b,#1d1d1d)!important;border:1px solid #474747!important;border-radius:9px}
+html body.product-detail-page #product-page.software-detail .pd-package-option{background:linear-gradient(120deg,#252525,#1b1b1b);border-color:#474747}
+html body.product-detail-page #product-page.software-detail .pd-package-option.is-selected{border-color:#4c4c4c;background:linear-gradient(120deg,#303030,#242424);box-shadow:0 0 16px rgba(128, 128, 128, 0.043)}
+html body.product-detail-page #product-page.software-detail .sd-aside h3{display:flex;align-items:center;gap:5px;margin:0 0 12px;font-size:17px;color:#f5f5f5}
+html body.product-detail-page #product-page.software-detail .pd-info-row{padding:11px 0!important;border-color:#3f3f3f}
 html body.product-detail-page #product-page.software-detail .sd-payment-method{gap:8px;padding:10px}
 html body.product-detail-page #product-page.software-detail .sd-payment-method img{width:58px;height:32px}
 html body.product-detail-page #product-page.software-detail .sd-payments{gap:8px}

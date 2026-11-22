@@ -8,8 +8,8 @@
 .rental-site .rental-delivery-step {min-height:0!important;height:auto!important;align-self:start;padding:18px!important;}
 .rental-site .rental-spec-card {min-height:0!important;height:auto!important;}
 .rental-site .rental-requirements {align-items:start!important;}
-.rental-site .rental-account-grid {max-height:370px;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;scrollbar-width:thin;scrollbar-color:#345887 transparent;padding-right:7px;align-content:start;}
-.rental-site .rental-account-grid:focus-visible {outline:2px solid var(--brand-hover,#6eb6ff);outline-offset:4px;}
+.rental-site .rental-account-grid {max-height:370px;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;scrollbar-width:thin;scrollbar-color:#3d3d3d transparent;padding-right:7px;align-content:start;}
+.rental-site .rental-account-grid:focus-visible {outline:2px solid var(--brand-hover,#4c4c4c);outline-offset:4px;}
 .rental-site #rental-main .rental-account-choice {flex-shrink:0;}
 .rental-site .rental-topic-icon {object-fit:contain;border:0;border-radius:0;}
 .rental-delivery-step strong .rental-topic-icon {vertical-align:middle;}
