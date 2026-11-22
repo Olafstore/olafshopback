@@ -2179,7 +2179,7 @@ main {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--brand);
+  background: var(--ui-fill);
 }
 
 .filter-radio-label input[type="radio"]:checked ~ span:not(.radio-custom) {
@@ -2272,7 +2272,7 @@ main {
   min-width: 22px;
   height: 22px;
   place-items: center;
-  background: var(--brand);
+  background: var(--ui-fill);
   color: #fff;
   font-size: 0.75rem;
   border-radius: 999px;
@@ -2364,7 +2364,7 @@ main {
 }
 
 .stock-toggle input:checked {
-  background-color: var(--brand);
+  background-color: var(--ui-fill);
   border-color: var(--brand);
   box-shadow: 0 2px 10px rgba(104, 104, 104, 0.138);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
@@ -2782,7 +2782,7 @@ main {
   display: block;
   width: 0;
   height: 100%;
-  background: linear-gradient(90deg, var(--brand), var(--accent));
+  background: linear-gradient(90deg, var(--ui-fill), var(--ui-fill));
   border-radius: 999px;
   transition: width 400ms ease;
 }
@@ -5382,7 +5382,7 @@ dialog::backdrop {
 }
 
 .recommended-card:hover .primary-button {
-  background: var(--brand-hover);
+  background: var(--ui-fill);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(128, 128, 128, 0.22);
 }
@@ -5665,7 +5665,7 @@ dialog::backdrop {
 }
 
 .hold-reveal-btn.is-success {
-  background: var(--brand);
+  background: var(--ui-fill);
   color: white;
   border-color: var(--brand);
   pointer-events: none;
@@ -6895,7 +6895,7 @@ dialog::backdrop {
 }
 
 .notification-item.unread .notification-icon {
-  background: var(--brand);
+  background: var(--ui-fill);
   color: white;
 }
 
@@ -7639,7 +7639,7 @@ dialog::backdrop {
 .toast.toast-payment svg { color: #ededed; }
 .toast.toast-payment { border-color: rgba(76, 76, 76, 0.3); }
 
-.toast.toast-order::before { background: var(--brand); }
+.toast.toast-order::before { background: var(--ui-fill); }
 .toast.toast-order svg { color: #c1c1c1; }
 .toast.toast-order { border-color: rgba(76, 76, 76, 0.3); }
 
@@ -7773,7 +7773,7 @@ dialog::backdrop {
   bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(90deg, var(--brand), #3d3d3d);
+  background: linear-gradient(90deg, var(--ui-fill), #3d3d3d);
   color: #fff;
   font-size: 1.15rem;
   font-weight: 800;
@@ -7910,7 +7910,7 @@ dialog::backdrop {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--brand), var(--accent));
+  background: linear-gradient(135deg, var(--ui-fill), var(--ui-fill));
   color: #fff;
   font-size: 0.75rem;
   font-weight: 700;
@@ -8076,7 +8076,7 @@ dialog::backdrop {
   gap: 6px;
   padding: 10px 16px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--brand), var(--accent));
+  background: linear-gradient(135deg, var(--ui-fill), var(--ui-fill));
   color: #fff;
   font-weight: 600;
   font-size: 0.88rem;
@@ -9470,7 +9470,7 @@ body.product-detail-page .pd-badges > .pd-badge:nth-child(n+2) { border:1px soli
 
 .pd-package-option.is-selected .pd-package-radio {
   border-color: var(--brand);
-  background: var(--brand);
+  background: var(--ui-fill);
   color: #fff;
 }
 
@@ -11385,7 +11385,7 @@ details.qr-manual-transfer[open] .qr-manual-transfer-body {
 }
 
 .order-confirm-accept-label input[type="checkbox"]:checked {
-  background: var(--brand);
+  background: var(--ui-fill);
   border-color: var(--brand);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
   background-size: 12px;
@@ -14384,7 +14384,7 @@ body.home-page .live-store-panel {
 }
 
 .footer-brand .brand-mark {
-  background: var(--brand);
+  background: var(--ui-fill);
   color: white;
   width: 28px;
   height: 28px;

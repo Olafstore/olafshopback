@@ -1037,7 +1037,7 @@ body {
 }
 
 .admin-nav button.is-active::before {
-  background: linear-gradient(180deg, var(--brand), var(--success));
+  background: linear-gradient(180deg, var(--ui-fill), var(--success));
 }
 
 .store-link {

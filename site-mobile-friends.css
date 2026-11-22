@@ -54,7 +54,7 @@ html body .site-theme-switcher{display:none!important;}
  html body.home-page .olaf-steam-activity-dots{min-height:44px;margin:10px 55px 0;gap:4px;}
  html body.home-page .olaf-steam-activity-dots button{width:30px;height:36px;background:transparent!important;border:0!important;box-shadow:none!important;display:grid;place-items:center;}
  html body.home-page .olaf-steam-activity-dots button::before{content:'';width:7px;height:7px;border-radius:9px;background:var(--theme-muted);}
- html body.home-page .olaf-steam-activity-dots button.is-active::before{width:22px;background:var(--theme-accent);}
+ html body.home-page .olaf-steam-activity-dots button.is-active::before{width:22px;background:var(--ui-fill);}
  html body .discord-floating-link{width:44px!important;min-width:44px!important;height:44px!important;min-height:44px!important;padding:6px!important;right:12px!important;bottom:calc(12px + env(safe-area-inset-bottom))!important;border-radius:14px!important;gap:0!important;}
  html body .discord-floating-link>:is(strong,small){display:none!important;}
  html body .discord-floating-link>span{display:grid!important;place-items:center;width:30px!important;height:30px!important;margin:0!important;border-radius:9px;}

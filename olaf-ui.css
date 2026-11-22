@@ -28,6 +28,8 @@ html[data-site-theme="main"] {
   --ui-accent-hover: #ffffff;
   --ui-accent-soft: #ffffff14;
   --ui-on-accent: #0e0e10;
+  --ui-fill: #38383f;
+  --ui-fill-hover: #45454d;
   --ui-active-border: #ffffff38;
   --ui-success: #36d07c;
   --ui-success-soft: #36d07c1f;
@@ -210,7 +212,7 @@ html:not(#olaf-ui):not(#olaf-ui-2) body .account-button {
 html:not(#olaf-ui):not(#olaf-ui-2) body .account-button:hover { background: var(--ui-surface-2) !important; }
 
 /* ---------- 4. Buttons ---------- */
-html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn, .primary-link, .catalog-buy, .auth-submit, button[type="submit"].primary-button) {
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn, .primary-link, .auth-submit, button[type="submit"].primary-button) {
   background: var(--ui-accent) !important;
   background-image: none !important;
   color: var(--ui-on-accent) !important;
@@ -221,11 +223,11 @@ html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .
   text-shadow: none !important;
   transition: background .15s var(--ui-ease), transform .15s var(--ui-ease);
 }
-html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn, .primary-link, .catalog-buy):hover {
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn, .primary-link):hover {
   background: var(--ui-accent-hover) !important;
   transform: translateY(-1px);
 }
-html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn, .primary-link, .catalog-buy):active { transform: translateY(0); }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn, .primary-link):active { transform: translateY(0); }
 html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn)::before,
 html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn)::after { display: none !important; }
 
@@ -269,8 +271,8 @@ html:not(#olaf-ui):not(#olaf-ui-2) body :is(.search-box, .catalog-sort-trigger) 
 
 /* ---------- 6. Surfaces (panels / cards / dialogs) ---------- */
 html:not(#olaf-ui):not(#olaf-ui-2) body :is(
-  .panel-block, .side-panel, .support-panel, .filter-popover, .catalog-results-bar, .toolbar,
-  .home-free-games, .home-free-games-rail, .stats-strip > article, .live-store-panel,
+  .panel-block, .side-panel, .support-panel, .filter-popover, .catalog-results-bar,
+  .home-free-games, .home-free-games-rail, .stats-strip > article,
   .recent-purchases-card, .video-showcase-card, .checkout-band, .info-band,
   .olaf-steam-collection-row, .discovery-row, .discovery-theme-row,
   .pd-info-card, .pd-sidebar-card, .pd-category-guide-panel, .pd-arrow-accordion,
@@ -545,7 +547,7 @@ html:not(#olaf-ui):not(#olaf-ui-2) body .home-free-games-empty {
 }
 
 /* rounded containers must clip their media */
-html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-steam-spotlight, .sw-hero, .sw-hero-banner, .video-showcase-card, .pd-sidebar-card, .olaf-steam-editorial-card, .rental-hero) { overflow: hidden !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.sw-hero, .sw-hero-banner, .video-showcase-card, .pd-sidebar-card, .olaf-steam-editorial-card, .rental-hero) { overflow: hidden !important; }
 html:not(#olaf-ui):not(#olaf-ui-2) body .pd-sidebar-cover, html:not(#olaf-ui):not(#olaf-ui-2) body .pd-sidebar-cover img { border-radius: 0 !important; }
 
 /* carousel arrows sit inside the frame as round glass buttons */
@@ -554,8 +556,8 @@ html:not(#olaf-ui):not(#olaf-ui-2) body button.olaf-steam-arrow {
   background: #0e0e10b3 !important; backdrop-filter: blur(6px);
   border: 1px solid #ffffff26 !important;
 }
-html:not(#olaf-ui):not(#olaf-ui-2) body button.olaf-steam-arrow.is-prev { left: 12px !important; }
-html:not(#olaf-ui):not(#olaf-ui-2) body button.olaf-steam-arrow.is-next { right: 12px !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body button.olaf-steam-arrow.is-prev { left: -14px !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body button.olaf-steam-arrow.is-next { right: -14px !important; }
 html:not(#olaf-ui):not(#olaf-ui-2) body button.olaf-steam-arrow:hover { background: var(--ui-surface-3) !important; }
 
 /* price block: no stray boxes, badge + price aligned */
@@ -666,6 +668,81 @@ html:not(#olaf-ui):not(#olaf-ui-2) body #product-page.software-detail .sd-tabs b
 html:not(#olaf-ui):not(#olaf-ui-2) body #product-page.software-detail .sd-tabs button:is(.is-active, [aria-selected="true"]) { color: var(--ui-text) !important; box-shadow: inset 0 -2px 0 var(--ui-text) !important; }
 html:not(#olaf-ui):not(#olaf-ui-2) body #product-page.software-detail .sd-highlights li::before { background: var(--ui-surface-3) !important; color: var(--ui-text) !important; }
 
+
+/* ---------- 23. Round 4 fixes ---------- */
+/* spotlight: cover image keeps the card's rounded corner without clipping the arrows */
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-spotlight { overflow: visible !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-spotlight-cover { border-radius: var(--ui-r-lg) 0 0 var(--ui-r-lg) !important; overflow: hidden !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-spotlight-info { border-radius: 0 var(--ui-r-lg) var(--ui-r-lg) 0 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body button.olaf-steam-arrow { background: var(--ui-surface-2) !important; border: 1px solid var(--ui-border-strong) !important; box-shadow: var(--ui-shadow-2) !important; z-index: 5 !important; }
+@media (max-width: 760px) {
+  html:not(#olaf-ui):not(#olaf-ui-2) body button.olaf-steam-arrow.is-prev { left: 6px !important; }
+  html:not(#olaf-ui):not(#olaf-ui-2) body button.olaf-steam-arrow.is-next { right: 6px !important; }
+}
+
+/* catalog toolbar + live orders: no outer frame around framed children */
+html:not(#olaf-ui):not(#olaf-ui-2) body div.toolbar:not(#olaf-z), html:not(#olaf-ui):not(#olaf-ui-2) body section.live-store-panel:not(#olaf-z) { background: transparent !important; border: 0 !important; box-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .video-showcase-card { padding: 0 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .promo-video-player { border-radius: var(--ui-r-lg) !important; overflow: hidden !important; }
+
+/* product-card cart button: dark fill, white icon */
+html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-buy {
+  background: var(--ui-fill) !important; background-image: none !important; color: var(--ui-text) !important;
+  border: 1px solid var(--ui-border-strong) !important; border-radius: var(--ui-r-sm) !important; box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-buy:hover { background: var(--ui-fill-hover) !important; transform: none; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-web-icon, html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-buy img { filter: grayscale(1) brightness(1.8) !important; }
+
+/* filter popover: toggle row is part of the panel, not a box in a box */
+html:not(#olaf-ui):not(#olaf-ui-2) body .filter-popover-actions { background: transparent !important; border: 0 !important; border-top: 1px solid var(--ui-border) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body label.stock-toggle:not(#olaf-z) { background: transparent !important; border: 0 !important; box-shadow: none !important; padding-inline: 0 !important; }
+
+/* "ดูสินค้าทั้งหมด →" style links with an arrow */
+html:not(#olaf-ui):not(#olaf-ui-2) body .primary-link { gap: 10px !important; padding-inline: 18px !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .primary-link :is(span, i, svg) { background: transparent !important; box-shadow: none !important; }
+
+/* profile bio (ig : ...): one clean line, no scrollbar arrows */
+html:not(#olaf-ui):not(#olaf-ui-2) body textarea#member-bio {
+  overflow: hidden !important; resize: none !important; scrollbar-width: none !important; field-sizing: content;
+  background: var(--ui-surface-2) !important; border: 1px solid var(--ui-border) !important; border-radius: var(--ui-r-sm) !important;
+  padding: 6px 10px !important; min-height: 0 !important; line-height: 1.5 !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body textarea#member-bio::-webkit-scrollbar { display: none; }
+
+/* mobile: collapsed search looks like the other icon buttons */
+@media (max-width: 900px) {
+  html:not(#olaf-ui):not(#olaf-ui-2) body :is(.site-global-search, .topbar-search-form):not(#olaf-z) { border-radius: var(--ui-r-sm) !important; padding: 0 3px !important; }
+  html:not(#olaf-ui):not(#olaf-ui-2) body .topbar .mobile-nav-toggle:not(#olaf-z) { border-radius: var(--ui-r-sm) !important; background: var(--ui-surface) !important; border: 1px solid var(--ui-border) !important; box-shadow: none !important; color: var(--ui-text) !important; }
+}
+
+/* buttons that used the old blue fill (rental categories, confirm buttons, ...) */
+html:not(#olaf-ui):not(#olaf-ui-2) body .rental-site #rental-main .rental-categories button[aria-pressed=true] { background: var(--ui-accent) !important; color: var(--ui-on-accent) !important; border-color: var(--ui-accent) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .brand-mark { background-color: var(--ui-surface-3) !important; color: var(--ui-text) !important; }
+
+/* payment dialogs: dark panels, only the QR tile stays white */
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog:is(.qr-payment-dialog, .site-cart-dialog) :is(.premium-dialog-inner, .premium-dialog-header, .qr-payment-content, .olaf-checkout-qr-card, .site-cart-paid-head) {
+  background: var(--ui-surface) !important; background-image: none !important; color: var(--ui-text) !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog.qr-payment-dialog .olaf-checkout-qr-card { background: var(--ui-surface-2) !important; border: 1px solid var(--ui-border) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog.qr-payment-dialog .olaf-checkout-qr-card :is(h3, header p, .olaf-checkout-qr-total span) { color: var(--ui-text-2) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog.qr-payment-dialog .olaf-checkout-qr-card h3, html:not(#olaf-ui):not(#olaf-ui-2) body dialog.qr-payment-dialog .qr-total-highlight { color: var(--ui-text) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog:is(.qr-payment-dialog, .site-cart-dialog) :is(.qr-image-frame, .site-cart-qr-frame) { background: #fff !important; border-color: var(--ui-border) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog:is(.qr-payment-dialog, .site-cart-dialog) :is(.qr-loading, .qr-unavailable, .site-cart-qr-loading) { background: #fff !important; color: #3b3b42 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog.qr-payment-dialog :is(.qr-note-alert, .qr-manual-transfer, .qr-store-note) { background: var(--ui-surface-3) !important; color: var(--ui-text) !important; border-color: var(--ui-border-strong) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog.qr-payment-dialog .qr-manual-transfer * { color: inherit; }
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog.qr-payment-dialog .qr-manual-transfer :is(div, section, article) { background-color: transparent; }
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog.qr-payment-dialog .qr-manual-transfer summary { color: var(--ui-text) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog.qr-payment-dialog .qr-manual-transfer summary:hover { background: var(--ui-surface-2) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog.qr-payment-dialog .dialog-close { background: var(--ui-surface-2) !important; color: var(--ui-text) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .text-button.text-danger { color: var(--ui-danger) !important; background: transparent !important; border: 1px solid #ff5d6c40 !important; border-radius: var(--ui-r-sm) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .text-button.text-danger:hover { background: var(--ui-danger-soft) !important; }
+
+/* other light-on-light spots found by the contrast scan */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-steam-discovery-row:hover, .olaf-steam-discovery-row.is-active) { background: var(--ui-surface-3) !important; background-image: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .category-layer-tab.is-active b { background: var(--ui-surface-3) !important; color: var(--ui-text) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .member-bio button { background: var(--ui-accent) !important; color: var(--ui-on-accent) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.atelier-save, .atelier-confirm) { background: var(--ui-accent) !important; background-image: none !important; color: var(--ui-on-accent) !important; }
+
 /* ---------- 13. Motion preference ---------- */
 @media (prefers-reduced-motion: reduce) {
   html:not(#olaf-ui):not(#olaf-ui-2) body * { transition: none !important; animation-duration: .001ms !important; }
@@ -729,3 +806,12 @@ html:not(#olaf-ui):not(#olaf-ui-2) body #product-page.software-detail .pd-sideba
 html:not(#olaf-ui):not(#olaf-ui-2) body #product-page.software-detail .sd-payment-panel { padding: 12px 16px !important; }
 html:not(#olaf-ui):not(#olaf-ui-2) body #product-page.software-detail .pd-hero-img img { object-fit: cover !important; border-radius: inherit !important; }
 html:not(#olaf-ui):not(#olaf-ui-2) body :is(.sd-fact-icon, .sd-service-icon img, .pd-feature-icon img) { filter: grayscale(1) brightness(1.5) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog:is(.qr-payment-dialog, .site-cart-dialog, .checkout-order-dialog) .premium-actions { background: var(--ui-surface-2) !important; background-image: none !important; border-color: var(--ui-border) !important; box-shadow: none !important; }
+/* rental flow primary buttons (ยืนยันเช่า ฯลฯ): same white primary as the rest of the site */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.rental-site, .rental-booking-dialog, .rental-vault, .rental-time-popup, .rental-renew-confirm) button.primary {
+  background: var(--ui-accent) !important; background-image: none !important; color: var(--ui-on-accent) !important;
+  border: 1px solid var(--ui-accent) !important; box-shadow: none !important; font-weight: 600 !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.rental-site, .rental-booking-dialog, .rental-vault, .rental-time-popup, .rental-renew-confirm) button.primary:disabled {
+  background: var(--ui-surface-3) !important; color: var(--ui-text-3) !important; border-color: var(--ui-border) !important; opacity: 1 !important;
+}
