@@ -879,3 +879,7 @@ html:not(#olaf-ui):not(#olaf-ui-2) body :is(.rental-site, .rental-booking-dialog
 html:not(#olaf-ui):not(#olaf-ui-2) body :is(.rental-site, .rental-booking-dialog, .rental-vault, .rental-time-popup, .rental-renew-confirm) button.primary:disabled {
   background: var(--ui-surface-3) !important; color: var(--ui-text-3) !important; border-color: var(--ui-border) !important; opacity: 1 !important;
 }
+
+/* homepage: tighter gap between the promo carousel and the Steam Preview widget */
+html:not(#olaf-ui):not(#olaf-ui-2) body.home-page:not(.catalog-page) #olaf-steam-storefront { padding-bottom: 8px !important; margin-bottom: 0 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body.home-page:not(.catalog-page) main#home > #catalog { padding-top: 32px !important; }
