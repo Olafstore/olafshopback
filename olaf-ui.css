@@ -1,0 +1,523 @@
+/* =====================================================================
+   OLAF UI — design system layer (v1, 2026-11-22)
+   Loaded LAST on every customer page. Visual only: colours, type,
+   spacing, radius, elevation. No layout logic, no JS hooks touched.
+   ===================================================================== */
+
+/* ---------- 1. Design tokens ---------- */
+:root,
+html[data-site-theme],
+html[data-site-theme="store"],
+html[data-site-theme="main"] {
+  /* neutral dark scale (cool grey, not navy) */
+  --ui-bg: #0d0f14;
+  --ui-bg-soft: #11141a;
+  --ui-surface: #161a21;
+  --ui-surface-2: #1c212a;
+  --ui-surface-3: #242a35;
+  --ui-border: #262c37;
+  --ui-border-strong: #343c4a;
+
+  /* text */
+  --ui-text: #eef1f6;
+  --ui-text-2: #b7bfcc;
+  --ui-text-3: #8089a0;
+
+  /* brand + states */
+  --ui-accent: #3d8bff;
+  --ui-accent-hover: #5a9dff;
+  --ui-accent-soft: #3d8bff1f;
+  --ui-success: #36d07c;
+  --ui-success-soft: #36d07c1f;
+  --ui-warning: #f2b544;
+  --ui-warning-soft: #f2b5441f;
+  --ui-danger: #ff5d6c;
+  --ui-danger-soft: #ff5d6c1f;
+  --ui-sale: #a4d007;          /* discount badge (game-store convention) */
+  --ui-sale-bg: #4c6b22;
+
+  /* type scale (1.25 modular, base 16) */
+  --ui-font: "Kanit", "Noto Sans Thai", system-ui, sans-serif;
+  --ui-fs-xs: 12px;
+  --ui-fs-sm: 14px;
+  --ui-fs-md: 16px;
+  --ui-fs-lg: 20px;
+  --ui-fs-xl: 25px;
+  --ui-fs-2xl: 31px;
+  --ui-fs-3xl: 39px;
+
+  /* 8pt spacing */
+  --ui-s1: 4px;
+  --ui-s2: 8px;
+  --ui-s3: 12px;
+  --ui-s4: 16px;
+  --ui-s5: 24px;
+  --ui-s6: 32px;
+  --ui-s7: 48px;
+  --ui-s8: 64px;
+
+  /* shape + elevation */
+  --ui-r-sm: 8px;
+  --ui-r-md: 12px;
+  --ui-r-lg: 16px;
+  --ui-r-pill: 999px;
+  --ui-shadow-1: 0 1px 2px #0006;
+  --ui-shadow-2: 0 8px 24px #00000059;
+  --ui-ring: 0 0 0 3px #3d8bff59;
+  --ui-ease: cubic-bezier(.2, .7, .2, 1);
+
+  /* map the site's existing variables onto the new tokens */
+  --bg: var(--ui-bg);
+  --bg-card: var(--ui-surface);
+  --bg-card-hover: var(--ui-surface-2);
+  --bg-elevated: var(--ui-surface-2);
+  --surface: var(--ui-surface);
+  --surface-2: var(--ui-surface-2);
+  --surface-3: var(--ui-surface-3);
+  --border: var(--ui-border);
+  --border-hover: var(--ui-border-strong);
+  --line: var(--ui-border);
+  --text: var(--ui-text);
+  --text-secondary: var(--ui-text-2);
+  --text-muted: var(--ui-text-3);
+  --muted: var(--ui-text-3);
+  --brand: var(--ui-accent);
+  --brand-hover: var(--ui-accent-hover);
+  --brand-strong: var(--ui-accent);
+  --accent: var(--ui-accent);
+  --success: var(--ui-success);
+  --danger: var(--ui-danger);
+  --gold: var(--ui-warning);
+  --radius: var(--ui-r-md);
+  --radius-sm: var(--ui-r-sm);
+  --radius-xs: 6px;
+  --shadow: var(--ui-shadow-1);
+  --shadow-lg: var(--ui-shadow-2);
+  --theme-base: var(--ui-bg);
+  --theme-panel: var(--ui-surface);
+  --theme-panel-end: var(--ui-surface);
+  --theme-card: var(--ui-surface);
+  --theme-raised: var(--ui-surface-2);
+  --theme-control: var(--ui-surface-2);
+  --theme-button: var(--ui-surface-2);
+  --theme-accent: var(--ui-accent-hover);
+  --theme-edge: var(--ui-border);
+  --theme-muted: var(--ui-text-3);
+  --theme-shadow: var(--ui-shadow-2);
+  --theme-success: var(--ui-success);
+  --theme-danger: var(--ui-danger);
+}
+
+/* ---------- 2. Base ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body {
+  background: var(--ui-bg) !important;
+  background-image: none !important;
+  color: var(--ui-text);
+  font-family: var(--ui-font);
+  font-size: var(--ui-fs-md);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body::before,
+html:not(#olaf-ui):not(#olaf-ui-2) body::after,
+html:not(#olaf-ui):not(#olaf-ui-2) body .app-shell::before,
+html:not(#olaf-ui):not(#olaf-ui-2) body .app-shell::after { background: none !important; }
+
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(h1, h2, h3, h4) { color: var(--ui-text); letter-spacing: -0.01em; }
+html:not(#olaf-ui):not(#olaf-ui-2) body h1 { font-weight: 600; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(h2, h3) { font-weight: 600; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(p, small) { color: inherit; }
+
+html:not(#olaf-ui):not(#olaf-ui-2) body .eyebrow,
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-section-head p,
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-kicker {
+  color: var(--ui-accent-hover) !important;
+  font-size: var(--ui-fs-xs) !important;
+  font-weight: 600 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase;
+}
+
+html:not(#olaf-ui):not(#olaf-ui-2) body ::selection { background: #3d8bff55; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :focus-visible { outline: none; box-shadow: var(--ui-ring) !important; border-radius: var(--ui-r-sm); }
+
+/* scrollbars */
+html:not(#olaf-ui):not(#olaf-ui-2) body * { scrollbar-color: var(--ui-surface-3) transparent; scrollbar-width: thin; }
+html:not(#olaf-ui):not(#olaf-ui-2) body ::-webkit-scrollbar { width: 10px; height: 10px; }
+html:not(#olaf-ui):not(#olaf-ui-2) body ::-webkit-scrollbar-thumb { background: var(--ui-surface-3); border-radius: 10px; border: 2px solid var(--ui-bg); }
+html:not(#olaf-ui):not(#olaf-ui-2) body ::-webkit-scrollbar-track { background: transparent; }
+
+/* ---------- 3. Top bar ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body .topbar,
+html:not(#olaf-ui):not(#olaf-ui-2) body .site-topbar-unified,
+html:not(#olaf-ui):not(#olaf-ui-2) body .refresh-header {
+  background: #0d0f14eb !important;
+  background-image: none !important;
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  border-bottom: 1px solid var(--ui-border) !important;
+  box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body .brand strong { color: var(--ui-text) !important; font-weight: 600; letter-spacing: .02em; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .brand small { color: var(--ui-text-3) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .brand-mark { border-radius: var(--ui-r-sm) !important; box-shadow: none !important; }
+
+html:not(#olaf-ui):not(#olaf-ui-2) body .main-nav a {
+  color: var(--ui-text-2) !important;
+  font-weight: 500;
+  border-radius: var(--ui-r-sm) !important;
+  background: transparent !important;
+  transition: color .15s var(--ui-ease), background .15s var(--ui-ease);
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body .main-nav a:hover { color: var(--ui-text) !important; background: var(--ui-surface-2) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .main-nav a.is-active,
+html:not(#olaf-ui):not(#olaf-ui-2) body .main-nav a[aria-current="page"] { color: var(--ui-text) !important; background: var(--ui-surface-2) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .main-nav a::after,
+html:not(#olaf-ui):not(#olaf-ui-2) body .main-nav a.is-active::after { background: var(--ui-accent) !important; box-shadow: none !important; }
+
+/* search */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.site-global-search, .topbar-search-form, .site-unified-search .topbar-search-form) {
+  background: var(--ui-surface) !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-r-pill) !important;
+  box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.site-global-search, .topbar-search-form):focus-within { border-color: var(--ui-accent) !important; box-shadow: var(--ui-ring) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.site-global-search, .topbar-search-form) input:is([type], :not([type])):not(#x) { border: 0 !important; box-shadow: none !important; color: var(--ui-text) !important; background: transparent !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body input::placeholder, html:not(#olaf-ui):not(#olaf-ui-2) body textarea::placeholder { color: var(--ui-text-3) !important; opacity: 1; }
+
+/* icon buttons in the bar */
+html:not(#olaf-ui):not(#olaf-ui-2) body .icon-button,
+html:not(#olaf-ui):not(#olaf-ui-2) body .topbar .icon-button {
+  background: var(--ui-surface) !important;
+  border: 1px solid var(--ui-border) !important;
+  color: var(--ui-text-2) !important;
+  border-radius: var(--ui-r-sm) !important;
+  box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body .icon-button:hover { background: var(--ui-surface-2) !important; color: var(--ui-text) !important; border-color: var(--ui-border-strong) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.notification-badge, .favorites-badge) { background: var(--ui-danger) !important; color: #fff !important; box-shadow: 0 0 0 2px var(--ui-bg) !important; }
+
+html:not(#olaf-ui):not(#olaf-ui-2) body .account-button {
+  background: var(--ui-surface) !important;
+  border: 1px solid var(--ui-border) !important;
+  color: var(--ui-text) !important;
+  border-radius: var(--ui-r-sm) !important;
+  box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body .account-button:hover { background: var(--ui-surface-2) !important; }
+
+/* ---------- 4. Buttons ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn, .primary-link, .catalog-buy, .auth-submit, button[type="submit"].primary-button) {
+  background: var(--ui-accent) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 1px solid transparent !important;
+  border-radius: var(--ui-r-sm) !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+  transition: background .15s var(--ui-ease), transform .15s var(--ui-ease);
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn, .primary-link, .catalog-buy):hover {
+  background: var(--ui-accent-hover) !important;
+  transform: translateY(-1px);
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn, .primary-link, .catalog-buy):active { transform: translateY(0); }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn)::before,
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn)::after { display: none !important; }
+
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.secondary-button, .ghost-button, .pd-favorite-btn, .cancel-order-btn, .pagination-btn, .tab-button, .profile-order-open) {
+  background: var(--ui-surface-2) !important;
+  background-image: none !important;
+  color: var(--ui-text) !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-r-sm) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.secondary-button, .ghost-button, .pd-favorite-btn, .cancel-order-btn, .pagination-btn, .tab-button):hover {
+  background: var(--ui-surface-3) !important;
+  border-color: var(--ui-border-strong) !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.tab-button, .pagination-btn).is-active,
+html:not(#olaf-ui):not(#olaf-ui-2) body .segmented :is(button, a).is-active {
+  background: var(--ui-accent-soft) !important;
+  color: var(--ui-accent-hover) !important;
+  border-color: #3d8bff66 !important;
+}
+
+/* ---------- 5. Form controls ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, textarea) {
+  background-color: var(--ui-bg-soft) !important;
+  color: var(--ui-text) !important;
+  border-color: var(--ui-border) !important;
+  border-radius: var(--ui-r-sm);
+  box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(input:not([type="checkbox"]):not([type="radio"]), select, textarea):focus {
+  border-color: var(--ui-accent) !important;
+  box-shadow: var(--ui-ring) !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.search-box, .catalog-sort-trigger) {
+  background: var(--ui-bg-soft) !important;
+  border-color: var(--ui-border) !important;
+  box-shadow: none !important;
+}
+
+/* ---------- 6. Surfaces (panels / cards / dialogs) ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(
+  .panel-block, .side-panel, .support-panel, .filter-popover, .catalog-results-bar, .toolbar,
+  .home-free-games, .home-free-games-rail, .stats-strip > article, .live-store-panel,
+  .recent-purchases-card, .video-showcase-card, .checkout-band, .info-band,
+  .olaf-steam-collection-row, .discovery-row, .discovery-theme-row,
+  .pd-info-card, .pd-sidebar-card, .pd-category-guide-panel, .pd-arrow-accordion,
+  .user-popover, .notification-popover, .language-popover, .search-suggestions,
+  .catalog-tag-panel, .catalog-side-categories, .hero-deal .hero-game-card,
+  .profile-card, .panel-card, .member-showcase, .member-stats, .point-topup-card
+) {
+  background: var(--ui-surface) !important;
+  background-image: none !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-r-lg) !important;
+  box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.user-popover, .notification-popover, .language-popover, .search-suggestions, .filter-popover, .catalog-sort-menu) {
+  background: var(--ui-surface-2) !important;
+  box-shadow: var(--ui-shadow-2) !important;
+}
+
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(dialog, .product-dialog, .favorites-dialog, .payment-dialog, .dashboard-dialog, .premium-dialog, .premium-dialog-inner) {
+  background: var(--ui-surface) !important;
+  background-image: none !important;
+  color: var(--ui-text);
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-r-lg) !important;
+  box-shadow: 0 24px 64px #000a !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body dialog::backdrop { background: #05070bcc; backdrop-filter: blur(4px); }
+html:not(#olaf-ui):not(#olaf-ui-2) body .dialog-close { background: var(--ui-surface-2) !important; border: 1px solid var(--ui-border) !important; color: var(--ui-text-2) !important; border-radius: var(--ui-r-sm) !important; }
+
+/* ---------- 7. Product cards (all grids) ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.product-card, .catalog-shop-card, .game-card, .olaf-steam-deal-card, .pd-related-card, .discovery-card, .home-free-game-card, .olaf-steam-theme-card) {
+  background: var(--ui-surface) !important;
+  background-image: none !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-r-md) !important;
+  box-shadow: none !important;
+  overflow: hidden;
+  transition: border-color .18s var(--ui-ease), transform .18s var(--ui-ease), background .18s var(--ui-ease);
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.product-card, .catalog-shop-card, .game-card, .olaf-steam-deal-card, .pd-related-card, .discovery-card, .home-free-game-card):hover {
+  border-color: var(--ui-border-strong) !important;
+  background: var(--ui-surface-2) !important;
+  transform: translateY(-2px);
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.product-image, .olaf-steam-deal-media, .pd-related-img) { background: var(--ui-bg-soft) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-steam-deal-sheen, .olaf-steam-cover-glow) { display: none !important; }
+
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.product-body, .olaf-steam-deal-body, .pd-related-body) h3,
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-steam-deal-name, .pd-related-name) {
+  color: var(--ui-text) !important;
+  font-weight: 500 !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.catalog-platform, .pd-related-publisher, .catalog-kind-text) { color: var(--ui-text-3) !important; }
+
+/* category / platform chip on the card image */
+html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-kind {
+  background: #0d0f14d9 !important;
+  color: var(--ui-text) !important;
+  border: 1px solid #ffffff1f !important;
+  border-radius: var(--ui-r-pill) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(6px);
+  font-weight: 500 !important;
+}
+
+/* availability */
+html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-availability { color: var(--ui-success) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.stock-pill, .olaf-steam-stock, small.in-stock, small.low-stock) {
+  border-radius: var(--ui-r-pill) !important;
+  box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.in-stock, .stock-pill.in-stock) { color: var(--ui-success) !important; background: var(--ui-success-soft) !important; border-color: transparent !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.low-stock, .stock-pill.low-stock) { color: var(--ui-warning) !important; background: var(--ui-warning-soft) !important; border-color: transparent !important; }
+
+/* ---------- 8. Prices ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-steam-price, .catalog-buy-row strong, .pd-price-main, .pd-related-price, .premium-product-price) { color: var(--ui-text) !important; text-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-price-main { font-weight: 700 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.pd-price-compare, .olaf-steam-price s, .olaf-steam-price del) { color: var(--ui-text-3) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.pd-price-discount, .olaf-steam-price .discount, .olaf-steam-discount, .discount-pill, .olaf-sale-pct, [class*="discount-badge"]) {
+  background: var(--ui-sale-bg) !important;
+  color: var(--ui-sale) !important;
+  border: 0 !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+/* ---------- 9. Chips / tags / badges ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-steam-tags a, .pd-genre-tag, .catalog-tag-panel button, .category-list button, .pd-badge, .live-status-pill, .payment-badge) {
+  background: var(--ui-surface-2) !important;
+  color: var(--ui-text-2) !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-r-pill) !important;
+  box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-steam-tags a, .pd-genre-tag, .catalog-tag-panel button, .category-list button):hover { color: var(--ui-text) !important; border-color: var(--ui-border-strong) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.category-list button, .catalog-side-categories button).is-active { background: var(--ui-accent-soft) !important; color: var(--ui-accent-hover) !important; border-color: #3d8bff55 !important; }
+
+/* ---------- 10. Home sections ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body .hero {
+  background: var(--ui-bg) !important;
+  border-bottom: 1px solid var(--ui-border) !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body .hero-media { opacity: .35; filter: saturate(.8); }
+html:not(#olaf-ui):not(#olaf-ui-2) body .hero-media::after { background: linear-gradient(90deg, var(--ui-bg) 0%, #0d0f1499 55%, #0d0f1426 100%) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .hero h1 { font-size: clamp(30px, 3.4vw, 46px) !important; line-height: 1.2 !important; color: var(--ui-text) !important; background: none !important; -webkit-text-fill-color: currentColor !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .hero-content > p:not(.eyebrow) { color: var(--ui-text-2) !important; font-size: var(--ui-fs-md) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .hero-game-card { box-shadow: var(--ui-shadow-2) !important; }
+
+html:not(#olaf-ui):not(#olaf-ui-2) body .stats-strip > article strong { color: var(--ui-text) !important; font-weight: 600 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .stats-strip > article span { color: var(--ui-text-3) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .stats-strip > article > div > div { background: var(--ui-accent-soft) !important; color: var(--ui-accent-hover) !important; box-shadow: none !important; background-image: none !important; }
+
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-section-head h2,
+html:not(#olaf-ui):not(#olaf-ui-2) body .section-heading h2,
+html:not(#olaf-ui):not(#olaf-ui-2) body .home-free-games-heading h2,
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-section-title,
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-related-heading h2 { font-size: var(--ui-fs-xl) !important; font-weight: 600 !important; color: var(--ui-text) !important; }
+
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-spotlight {
+  background: var(--ui-surface) !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-r-lg) !important;
+  box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-spotlight-info { background: var(--ui-surface) !important; background-image: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-spotlight-info h3 a { color: var(--ui-text) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-description { color: var(--ui-text-2) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-steam-arrow, .olaf-steam-track-controls button, .home-free-games-nav) {
+  background: var(--ui-surface-2) !important;
+  border: 1px solid var(--ui-border) !important;
+  color: var(--ui-text) !important;
+  box-shadow: none !important;
+  border-radius: var(--ui-r-sm) !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-dots button { background: var(--ui-surface-3) !important; box-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-dots button.is-active { background: var(--ui-accent) !important; }
+
+
+/* ---------- 10b. Home widgets (catalog tags, editorial rows, Steam preview, trust) ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(a.tag, .olaf-preview-tags a, #catalog-tag-categories a, .catalog-tag-reset) {
+  background: var(--ui-surface-2) !important;
+  background-image: none !important;
+  color: var(--ui-text-2) !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-r-pill) !important;
+  box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(a.tag, .olaf-preview-tags a, #catalog-tag-categories a):hover { color: var(--ui-text) !important; border-color: var(--ui-border-strong) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body #catalog-tag-categories a.is-active { background: var(--ui-accent-soft) !important; color: var(--ui-accent-hover) !important; border-color: #3d8bff55 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body a.tag.catalog-category-tag { background: var(--ui-accent-soft) !important; color: var(--ui-accent-hover) !important; border-color: transparent !important; }
+
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-steam-editorial-card, .olaf-steam-preview, .olaf-trust-card, .olaf-steam-row, .promo-video-player) {
+  background: var(--ui-surface) !important;
+  background-image: none !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-r-md) !important;
+  box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-row:hover { background: var(--ui-surface-2) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-preview-placeholder { background: var(--ui-surface-2) !important; background-image: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-widget-tab) {
+  background: var(--ui-surface-2) !important; background-image: none !important;
+  border: 1px solid var(--ui-border) !important; color: var(--ui-text-2) !important; border-radius: var(--ui-r-pill) !important; box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-widget-tab.is-active { background: var(--ui-accent-soft) !important; color: var(--ui-accent-hover) !important; border-color: #3d8bff66 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-trust-icon { background: var(--ui-accent-soft) !important; background-image: none !important; color: var(--ui-accent-hover) !important; box-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-steam-activity-label { background: var(--ui-accent) !important; background-image: none !important; color: #fff !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .olaf-sale-price { background: #0d0f14cc !important; color: var(--ui-text) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .hero-game-card-art { background-color: var(--ui-surface) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .promo-mute-btn { background: #0d0f14b3 !important; border: 1px solid var(--ui-border) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .highlight-profile-store {
+  background: var(--ui-surface-2) !important; background-image: none !important; color: var(--ui-text) !important;
+  border: 1px solid var(--ui-border) !important; border-radius: var(--ui-r-sm) !important; box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body .highlight-profile-store span { background: transparent !important; background-image: none !important; }
+
+/* one consistent discount badge everywhere */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-steam-price, .pd-price-row, .olaf-steam-row, .pd-related-price, .catalog-buy-row) :is([class*="discount"], [class*="-off"], .olaf-discount, .sale-badge) {
+  background: var(--ui-sale-bg) !important; background-image: none !important; color: var(--ui-sale) !important;
+  border: 0 !important; border-radius: 6px !important; font-weight: 700 !important; box-shadow: none !important;
+}
+
+/* ---------- 11. Product page ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-bg-backdrop { opacity: .18 !important; filter: blur(40px) saturate(.8) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-hero-img { border-radius: var(--ui-r-lg) !important; border: 1px solid var(--ui-border) !important; box-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-thumb { border-radius: var(--ui-r-sm) !important; border: 2px solid transparent !important; box-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-thumb.is-active { border-color: var(--ui-accent) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-sidebar-title { color: var(--ui-text) !important; font-weight: 600 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-sidebar-publisher, html:not(#olaf-ui):not(#olaf-ui-2) body .pd-price-label { color: var(--ui-text-3) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-info-row { border-color: var(--ui-border) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-section-icon-box, html:not(#olaf-ui):not(#olaf-ui-2) body .pd-feature-icon { background: var(--ui-accent-soft) !important; color: var(--ui-accent-hover) !important; box-shadow: none !important; border-color: transparent !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-feature-item { background: var(--ui-surface-2) !important; border: 1px solid var(--ui-border) !important; border-radius: var(--ui-r-md) !important; box-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-breadcrumb a { color: var(--ui-text-3) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-breadcrumb a:hover { color: var(--ui-text) !important; }
+
+/* ---------- 12. Footer + floating ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body .site-footer { background: var(--ui-bg-soft) !important; border-top: 1px solid var(--ui-border) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .site-footer :is(a, p) { color: var(--ui-text-3) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .site-footer a:hover { color: var(--ui-text) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .site-footer h3, html:not(#olaf-ui):not(#olaf-ui-2) body .site-footer h4 { color: var(--ui-text) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .discord-floating-link {
+  background: var(--ui-surface-2) !important;
+  border: 1px solid var(--ui-border) !important;
+  box-shadow: var(--ui-shadow-2) !important;
+  border-radius: var(--ui-r-md) !important;
+}
+
+
+/* ---------- 14. Auth pages (login / register) ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.auth-brand-mark, .auth-feature-icon, .auth-welcome-icon) { background: var(--ui-surface-2) !important; background-image: none !important; border: 1px solid var(--ui-border) !important; box-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .auth-tagline h1 { background: none !important; -webkit-text-fill-color: currentColor !important; color: var(--ui-text) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .auth-tabs { background: var(--ui-bg-soft) !important; border: 1px solid var(--ui-border) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .auth-tabs a { background: transparent !important; color: var(--ui-text-2) !important; box-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .auth-tabs a:is(.is-active, .active, [aria-current="page"]) { background: var(--ui-surface-3) !important; color: var(--ui-text) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .submit-btn { background: var(--ui-accent) !important; background-image: none !important; color: #fff !important; border: 0 !important; box-shadow: none !important; border-radius: var(--ui-r-sm) !important; font-weight: 600 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .submit-btn:hover { background: var(--ui-accent-hover) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .google-oauth-btn { background: var(--ui-surface-2) !important; background-image: none !important; color: var(--ui-text) !important; border: 1px solid var(--ui-border) !important; box-shadow: none !important; border-radius: var(--ui-r-sm) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .google-oauth-btn:hover { background: var(--ui-surface-3) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .oauth-divider::before, html:not(#olaf-ui):not(#olaf-ui-2) body .oauth-divider::after { background: var(--ui-border) !important; background-image: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.auth-card, .auth-panel, .auth-form-card, .auth-feature) { background: var(--ui-surface) !important; background-image: none !important; border-color: var(--ui-border) !important; box-shadow: none !important; }
+
+/* ---------- 15. Catalog page extras ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body .section-heading, html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-hero { background-image: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.stock-toggle, .catalog-view-controls) { background: var(--ui-surface-2) !important; border-color: var(--ui-border) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .pd-offline-guide-list details { background: var(--ui-surface-2) !important; border: 1px solid var(--ui-border) !important; border-radius: var(--ui-r-md) !important; }
+
+/* ---------- 16. Rentals / top-up heroes ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.rental-hero, .point-topup-copy, .sw-hero, .sw-hero-banner) {
+  background-color: var(--ui-surface) !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-r-lg) !important;
+  box-shadow: none !important;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.rental-hero, .point-topup-copy) { background-image: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.point-topup-balance-icon, .point-topup-live-icon) { background: var(--ui-accent-soft) !important; background-image: none !important; color: var(--ui-accent-hover) !important; box-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .point-topup-presets button { background: var(--ui-surface-2) !important; background-image: none !important; border: 1px solid var(--ui-border) !important; color: var(--ui-text) !important; box-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .point-topup-presets button.is-active { background: var(--ui-accent-soft) !important; border-color: var(--ui-accent) !important; color: var(--ui-accent-hover) !important; }
+
+/* ---------- 17. Software store (more-products) ---------- */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.sw-card, .sw-service, .sw-promo) { background: var(--ui-surface) !important; background-image: none !important; border: 1px solid var(--ui-border) !important; border-radius: var(--ui-r-md) !important; box-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .sw-card:hover { background: var(--ui-surface-2) !important; border-color: var(--ui-border-strong) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .sw-cover { background-color: var(--ui-bg-soft) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .sw-categories button { background: var(--ui-surface-2) !important; background-image: none !important; border: 1px solid var(--ui-border) !important; color: var(--ui-text-2) !important; border-radius: var(--ui-r-pill) !important; box-shadow: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .sw-categories button:is(.is-active, [aria-pressed="true"]) { background: var(--ui-accent-soft) !important; color: var(--ui-accent-hover) !important; border-color: #3d8bff66 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .sw-primary { background: var(--ui-accent) !important; background-image: none !important; color: #fff !important; box-shadow: none !important; border-radius: var(--ui-r-sm) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .sw-show-all { background: var(--ui-surface-2) !important; border: 1px solid var(--ui-border) !important; color: var(--ui-text) !important; }
+
+/* ---------- 13. Motion preference ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html:not(#olaf-ui):not(#olaf-ui-2) body * { transition: none !important; animation-duration: .001ms !important; }
+}
