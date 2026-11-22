@@ -28,6 +28,7 @@ html[data-site-theme="main"] {
   --ui-accent-hover: #ffffff;
   --ui-accent-soft: #ffffff14;
   --ui-on-accent: #0e0e10;
+  --ui-icon: #6ab7ff;
   --ui-fill: #38383f;
   --ui-fill-hover: #45454d;
   --ui-active-border: #ffffff38;
@@ -691,7 +692,7 @@ html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-buy {
   border: 1px solid var(--ui-border-strong) !important; border-radius: var(--ui-r-sm) !important; box-shadow: none !important;
 }
 html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-buy:hover { background: var(--ui-fill-hover) !important; transform: none; }
-html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-web-icon, html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-buy img { filter: grayscale(1) brightness(1.8) !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-buy img { filter: brightness(0) invert(1) !important; }
 
 /* filter popover: toggle row is part of the panel, not a box in a box */
 html:not(#olaf-ui):not(#olaf-ui-2) body .filter-popover-actions { background: transparent !important; border: 0 !important; border-top: 1px solid var(--ui-border) !important; }
@@ -742,6 +743,69 @@ html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-steam-discovery-row:hover, .ol
 html:not(#olaf-ui):not(#olaf-ui-2) body .category-layer-tab.is-active b { background: var(--ui-surface-3) !important; color: var(--ui-text) !important; }
 html:not(#olaf-ui):not(#olaf-ui-2) body .member-bio button { background: var(--ui-accent) !important; color: var(--ui-on-accent) !important; }
 html:not(#olaf-ui):not(#olaf-ui-2) body :is(.atelier-save, .atelier-confirm) { background: var(--ui-accent) !important; background-image: none !important; color: var(--ui-on-accent) !important; }
+
+
+/* ---------- 24. Round 5 ---------- */
+/* icons: sky blue everywhere; icons on white buttons and the cart stay neutral */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(svg.lucide, svg[data-lucide-fallback], i[data-lucide] > svg) { color: var(--ui-icon); }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.primary-button, .register-button, .pd-buy-btn, .submit-order-btn, .primary-link, .auth-submit, .submit-btn, .sw-primary, button.primary, .tab-button.is-active, [aria-pressed="true"]) :is(svg.lucide, svg[data-lucide-fallback]) { color: currentColor !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .catalog-buy :is(svg, svg.lucide, svg[data-lucide-fallback]) { color: #fff !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.danger-button, .text-danger, .mobile-menu-logout, [class*="logout"]) :is(svg.lucide, svg[data-lucide-fallback]) { color: currentColor !important; }
+
+/* home: the clip is gone, recent orders now appear as a toast (olaf-live-toast.js) */
+html:not(#olaf-ui):not(#olaf-ui-2) body section.live-store-panel { display: none !important; }
+.olaf-live-toast { position: fixed; left: 20px; bottom: 78px; z-index: 96; width: min(330px, calc(100vw - 24px)); pointer-events: none; }
+.olaf-live-toast-card {
+  pointer-events: auto; background: #18181bf2; border: 1px solid var(--ui-border-strong); border-radius: var(--ui-r-md);
+  box-shadow: 0 10px 30px #0009; padding: 8px 10px 10px; backdrop-filter: blur(10px);
+  opacity: 0; transform: translateY(8px); transition: opacity .45s var(--ui-ease), transform .45s var(--ui-ease);
+}
+.olaf-live-toast-card.is-in { opacity: 1; transform: none; }
+.olaf-live-toast-card.is-out { opacity: 0; transform: translateY(4px); }
+.olaf-live-toast-label { display: block; font-size: 11px; color: var(--ui-text-3); margin: 0 0 6px 2px; letter-spacing: .02em; }
+html body .olaf-live-toast .recent-purchase-row {
+  display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 10px !important; align-items: center !important;
+  background: transparent !important; border: 0 !important; padding: 0 !important; margin: 0 !important; box-shadow: none !important;
+}
+html body .olaf-live-toast .recent-purchase-thumb, html body .olaf-live-toast .recent-purchase-icon { flex: 0 0 40px !important; width: 40px; height: 40px; border-radius: 8px; object-fit: cover; }
+html body .olaf-live-toast .recent-purchase-main { min-width: 0 !important; flex: 1 1 auto !important; display: grid !important; gap: 2px !important; }
+html body .olaf-live-toast .recent-purchase-main strong { font-size: 13px; color: var(--ui-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+html body .olaf-live-toast .recent-purchase-main small { font-size: 11px; color: var(--ui-text-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+html body .olaf-live-toast time { flex: 0 0 auto !important; grid-column: auto !important; display: grid !important; justify-items: end; gap: 2px; font-size: 11px; color: var(--ui-text-3); white-space: nowrap; }
+html body .olaf-live-toast time b { color: var(--ui-text-2); font-weight: 600; }
+@media (max-width: 600px) { .olaf-live-toast { width: calc(100vw - 96px); } }
+@media (prefers-reduced-motion: reduce) { .olaf-live-toast-card { transition: opacity .2s linear; transform: none !important; } }
+
+/* mobile drawer: no "สินค้า" / "หมวดหมู่", account buttons pinned to the bottom */
+html:not(#olaf-ui):not(#olaf-ui-2) body .mobile-menu-list a:is([href="index.html#catalog"], [href="#catalog"], [href="more-products.html"]) { display: none !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body nav:has(> .mobile-menu-list) { display: flex; flex-direction: column; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .mobile-menu-list { flex: 1 1 auto !important; overflow-y: auto; align-content: start !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .mobile-menu-list > a { flex: 0 0 auto !important; width: 100% !important; box-sizing: border-box; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .mobile-menu-footer { margin-top: auto !important; padding-bottom: calc(14px + env(safe-area-inset-bottom)) !important; }
+
+/* profile self-description: reads as text on the cover, becomes a field on hover/focus (desktop, tablet, phone) */
+html:not(#olaf-ui):not(#olaf-ui-2) body .member-identity .member-bio { width: 100%; max-width: 560px; margin-top: 6px; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .member-identity .member-bio form { display: block !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body textarea#member-bio {
+  display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;
+  field-sizing: content; min-height: 1.6em !important; height: auto; overflow: hidden !important; resize: none !important;
+  background: transparent !important; border: 1px dashed transparent !important; border-radius: var(--ui-r-sm) !important;
+  padding: 4px 8px !important; margin-left: -8px !important;
+  color: #f2f2f4 !important; -webkit-text-fill-color: #f2f2f4 !important; text-shadow: 0 1px 3px #000c !important;
+  font-size: 14px !important; line-height: 1.6 !important; white-space: pre-wrap !important; overflow-wrap: anywhere !important;
+  transition: background .2s, border-color .2s;
+}
+html:not(#olaf-ui):not(#olaf-ui-2) body textarea#member-bio::placeholder { color: #f2f2f4a6 !important; -webkit-text-fill-color: #f2f2f4a6 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body textarea#member-bio:hover { border-color: #ffffff40 !important; }
+html:not(#olaf-ui):not(#olaf-ui-2) body textarea#member-bio:focus { background: #0e0e10cc !important; border: 1px solid var(--ui-border-strong) !important; text-shadow: none !important; box-shadow: none !important; }
+@media (max-width: 768px) {
+  html:not(#olaf-ui):not(#olaf-ui-2) body .member-identity .member-bio { max-width: 100%; }
+  html:not(#olaf-ui):not(#olaf-ui-2) body textarea#member-bio { font-size: 16px !important; margin-left: 0 !important; padding: 4px 6px !important; }
+}
+
+/* smoother scrolling on the long homepage: skip rendering of far-below sections until needed */
+html:not(#olaf-ui):not(#olaf-ui-2) body :is(.olaf-steam-collection-shelves, .steam-preview-zone, .olaf-steam-taste-stack > section, .site-footer) { content-visibility: auto; contain-intrinsic-size: auto 900px; }
+html:not(#olaf-ui):not(#olaf-ui-2) body .site-footer { contain-intrinsic-size: auto 320px; }
 
 /* ---------- 13. Motion preference ---------- */
 @media (prefers-reduced-motion: reduce) {

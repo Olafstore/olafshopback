@@ -271,74 +271,6 @@
           <div class="recent-purchase-list" id="recent-purchases-list" aria-live="polite"></div>
         </article>
 
-        <article class="video-showcase-card"
-          style="padding: 0; border: none; display: flex; flex-direction: column; overflow: hidden; border-radius: 16px; background: transparent;">
-          <style>
-            @media (max-width: 768px) {
-
-              .video-showcase-card,
-              .promo-video-layout,
-              .promo-video-player {
-                aspect-ratio: 16 / 9 !important;
-                height: auto !important;
-                min-height: unset !important;
-              }
-            }
-
-            .promo-mute-btn {
-              position: absolute;
-              bottom: 16px;
-              right: 16px;
-              background: rgba(28, 28, 28, 0.6);
-              backdrop-filter: blur(8px);
-              border: 1px solid rgba(255, 255, 255, 0.1);
-              color: white;
-              width: 44px;
-              height: 44px;
-              border-radius: 50%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              cursor: pointer;
-              z-index: 10;
-              transition: all 0.2s;
-            }
-
-            .promo-mute-btn:hover {
-              background: var(--brand);
-              transform: scale(1.05);
-            }
-
-            .promo-mute-btn i {
-              width: 22px;
-              height: 22px;
-            }
-          </style>
-          <div class="live-card-head" style="display: none !important;">
-            <div>
-              <p class="eyebrow">Recommended Clips</p>
-              <h2>สินค้าแนะนำแบบวิดีโอ</h2>
-            </div>
-          </div>
-          <div class="promo-video-layout"
-            style="display: block; width: 100%; height: 100%; min-height: 400px; margin: 0; gap: 0; padding: 0;">
-            <div class="promo-video-player"
-              style="padding: 0; border-radius: inherit; overflow: hidden; display: flex; width: 100%; height: 100%; min-height: 100%;">
-              <video id="promo-video-player" autoplay muted playsinline webkit-playsinline preload="metadata"
-                style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit; position: absolute; top: 0; left: 0;"></video>
-              <button id="promo-mute-btn" class="promo-mute-btn" aria-label="Toggle Mute" type="button">
-                <i data-lucide="volume-x"></i>
-              </button>
-              <div class="promo-video-overlay" style="display: none !important;">
-                <span><i data-lucide="play-circle"></i> OLAF Preview</span>
-                <strong id="promo-video-title">v1</strong>
-              </div>
-              <p class="promo-video-status" id="promo-video-status" style="display: none !important;">วางไฟล์ v1.mp4,
-                v2.mp4, v3.mp4 ใน assets/videos</p>
-            </div>
-            <div class="promo-video-playlist" id="promo-video-playlist" style="display: none !important;"></div>
-          </div>
-        </article>
       </section>
       <section class="catalog-section" id="catalog">
         <section class="steam-preview-zone" id="steam-preview-zone" hidden></section>
@@ -577,7 +509,8 @@
   </a>
 
   <div class="toast-container" id="toast-container"></div>
-<link rel="stylesheet" href="olaf-ui.css?v=20261122-ui4" />
+<script src="olaf-live-toast.js?v=20261122-ui5" defer></script>
+<link rel="stylesheet" href="olaf-ui.css?v=20261122-ui5" />
 </body>
 
 </html>
