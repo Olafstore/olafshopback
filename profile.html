@@ -59,9 +59,9 @@
     body {
       padding-top: 0;
       background:
-        radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(152, 152, 152, 0.18), transparent 30%),
         radial-gradient(circle at left top, rgba(249, 115, 22, 0.12), transparent 28%),
-        linear-gradient(180deg, #050816 0%, #06101f 42%, #02050d 100%);
+        linear-gradient(180deg, #0e0e0e 0%, #121212 42%, #02050d 100%);
     }
 
     .profile-page,
@@ -106,7 +106,7 @@
     .profile-shell::before {
       top: 80px;
       right: -110px;
-      background: rgba(37, 99, 235, 0.24);
+      background: rgba(136, 136, 136, 0.24);
     }
 
     .profile-shell::after {
@@ -134,14 +134,14 @@
       width: 62px;
       height: 62px;
       border-radius: 20px;
-      background: linear-gradient(145deg, #2563eb, #3b82f6 55%, #f97316);
+      background: linear-gradient(145deg, #3d3d3d, #3d3d3d 55%, #f97316);
       display: grid;
       place-items: center;
       font-size: 1.5rem;
       font-weight: 800;
       color: #fff;
-      border: 1px solid rgba(148, 197, 255, 0.22);
-      box-shadow: 0 14px 36px rgba(37, 99, 235, 0.28);
+      border: 1px solid rgba(76, 76, 76, 0.22);
+      box-shadow: 0 14px 36px rgba(128, 128, 128, 0.154);
     }
 
     .profile-avatar-badge {
@@ -152,7 +152,7 @@
       height: 22px;
       border-radius: 999px;
       background: var(--success);
-      border: 2px solid #050816;
+      border: 2px solid #0e0e0e;
       display: grid;
       place-items: center;
     }
@@ -182,9 +182,9 @@
     .profile-sidebar-card,
     .profile-sidebar-logout,
     .panel-card {
-      border: 1px solid rgba(148, 163, 184, 0.18);
-      background: linear-gradient(180deg, rgba(7, 13, 30, 0.94), rgba(4, 8, 20, 0.92));
-      box-shadow: 0 24px 60px rgba(2, 6, 23, 0.42);
+      border: 1px solid rgba(76, 76, 76, 0.18);
+      background: linear-gradient(180deg, rgba(18, 18, 18, 0.94), rgba(12, 12, 12, 0.92));
+      box-shadow: 0 24px 60px rgba(12, 12, 12, 0.231);
       backdrop-filter: blur(22px);
     }
 
@@ -200,7 +200,7 @@
       gap: 14px;
       margin-bottom: 18px;
       padding-bottom: 18px;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+      border-bottom: 1px solid rgba(76, 76, 76, 0.12);
     }
 
     .profile-sidebar-copy {
@@ -220,7 +220,7 @@
 
     .profile-sidebar-copy p {
       margin: 6px 0 0;
-      color: #9fb0d1;
+      color: #cccccc;
       font-size: 0.82rem;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -234,16 +234,16 @@
       gap: 10px;
       margin: -4px 0 14px;
       padding: 9px 12px;
-      border: 1px solid rgba(96, 165, 250, 0.12);
+      border: 1px solid rgba(76, 76, 76, 0.12);
       border-radius: 13px;
       background:
-        linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(8, 13, 27, 0.86)),
-        radial-gradient(circle at right, rgba(96, 165, 250, 0.14), transparent 46%);
+        linear-gradient(135deg, rgba(28, 28, 28, 0.92), rgba(18, 18, 18, 0.86)),
+        radial-gradient(circle at right, rgba(173, 173, 173, 0.14), transparent 46%);
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
     }
 
     .profile-sidebar-role-chip {
-      color: #60a5fa;
+      color: #c1c1c1;
       font-size: 0.76rem;
       font-weight: 800;
       letter-spacing: 0.01em;
@@ -255,7 +255,7 @@
       align-items: center;
       gap: 6px;
       min-width: 0;
-      color: #bfdbfe;
+      color: #f3f3f3;
       font-size: 0.76rem;
       font-weight: 700;
       text-decoration: none;
@@ -265,7 +265,7 @@
 
     .profile-sidebar-point-chip:hover,
     .profile-sidebar-point-chip:focus-visible {
-      color: #eff6ff;
+      color: #f5f5f5;
       transform: translateY(-1px);
       outline: none;
     }
@@ -273,7 +273,7 @@
     .profile-sidebar-point-chip svg {
       width: 14px;
       height: 14px;
-      color: #60a5fa;
+      color: #c1c1c1;
     }
 
     .profile-sidebar-nav {
@@ -288,12 +288,12 @@
       align-items: center;
       margin: -4px 0 16px;
       padding: 13px;
-      border: 1px solid rgba(96, 165, 250, 0.24);
+      border: 1px solid rgba(76, 76, 76, 0.24);
       border-radius: 16px;
       background:
-        radial-gradient(circle at top left, rgba(96, 165, 250, 0.24), transparent 44%),
-        linear-gradient(135deg, rgba(10, 20, 42, 0.92), rgba(8, 13, 27, 0.78));
-      box-shadow: 0 16px 32px rgba(2, 6, 23, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.045);
+        radial-gradient(circle at top left, rgba(173, 173, 173, 0.24), transparent 44%),
+        linear-gradient(135deg, rgba(26, 26, 26, 0.92), rgba(18, 18, 18, 0.78));
+      box-shadow: 0 16px 32px rgba(12, 12, 12, 0.143), inset 0 1px 0 rgba(255, 255, 255, 0.045);
     }
 
     .profile-points-card[hidden] {
@@ -306,20 +306,20 @@
       height: 42px;
       place-items: center;
       border-radius: 14px;
-      background: rgba(59, 130, 246, 0.14);
-      color: #93c5fd;
+      background: rgba(152, 152, 152, 0.14);
+      color: #dcdcdc;
     }
 
     .profile-points-card small {
       display: block;
-      color: #9fb0d1;
+      color: #cccccc;
       font-size: 0.75rem;
     }
 
     .profile-points-card strong {
       display: block;
       margin-top: 2px;
-      color: #eff6ff;
+      color: #f5f5f5;
       font-size: 1rem;
       font-weight: 800;
       line-height: 1.15;
@@ -330,7 +330,7 @@
       align-items: center;
       gap: 12px;
       padding: 14px 16px;
-      color: #cbd5e1;
+      color: #eaeaea;
       font-size: 0.92rem;
       font-weight: 600;
       cursor: pointer;
@@ -343,20 +343,20 @@
     }
 
     .profile-nav-item:hover {
-      background: rgba(37, 99, 235, 0.08);
+      background: rgba(136, 136, 136, 0.08);
       color: #fff;
       transform: translateX(2px);
     }
 
     .profile-nav-item.is-active {
-      background: linear-gradient(135deg, rgba(30, 64, 175, 0.86), rgba(37, 99, 235, 0.72));
+      background: linear-gradient(135deg, rgba(61, 61, 61, 0.86), rgba(61, 61, 61, 0.72));
       color: #fff;
-      box-shadow: inset 0 0 0 1px rgba(191, 219, 254, 0.12), 0 16px 32px rgba(37, 99, 235, 0.24);
+      box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.066), 0 16px 32px rgba(128, 128, 128, 0.132);
     }
 
     .profile-nav-item svg {
       flex-shrink: 0;
-      color: #7dd3fc;
+      color: #d1d1d1;
     }
 
     .profile-sidebar-logout {
@@ -420,7 +420,7 @@
       justify-content: space-between;
       gap: 16px;
       padding: 24px 26px;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+      border-bottom: 1px solid rgba(76, 76, 76, 0.12);
     }
 
     .panel-heading {
@@ -435,9 +435,9 @@
       height: 44px;
       place-items: center;
       border-radius: 14px;
-      background: rgba(37, 99, 235, 0.14);
-      border: 1px solid rgba(96, 165, 250, 0.18);
-      color: #60a5fa;
+      background: rgba(136, 136, 136, 0.14);
+      border: 1px solid rgba(76, 76, 76, 0.18);
+      color: #c1c1c1;
       flex-shrink: 0;
     }
 
@@ -475,7 +475,7 @@
       min-height: 44px;
       padding: 0 16px;
       border-radius: 14px;
-      border: 1px solid rgba(148, 163, 184, 0.16);
+      border: 1px solid rgba(76, 76, 76, 0.16);
       background: rgba(255, 255, 255, 0.04);
       color: var(--text);
       text-decoration: none;
@@ -486,8 +486,8 @@
 
     .mini-button:hover {
       transform: translateY(-1px);
-      border-color: rgba(96, 165, 250, 0.34);
-      background: rgba(37, 99, 235, 0.12);
+      border-color: rgba(76, 76, 76, 0.34);
+      background: rgba(136, 136, 136, 0.12);
     }
 
     .field-group {
@@ -530,8 +530,8 @@
       width: 100%;
       height: 46px;
       padding: 0 14px 0 42px;
-      background: rgba(2, 6, 23, 0.68);
-      border: 1px solid rgba(148, 163, 184, 0.16);
+      background: rgba(12, 12, 12, 0.68);
+      border: 1px solid rgba(76, 76, 76, 0.16);
       border-radius: 12px;
       color: var(--text);
       font-size: 0.9rem;
@@ -541,9 +541,9 @@
     }
 
     .field-input:focus {
-      border-color: #3b82f6;
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
-      background: rgba(2, 6, 23, 0.82);
+      border-color: #4c4c4c;
+      box-shadow: 0 0 0 3px rgba(128, 128, 128, 0.066);
+      background: rgba(12, 12, 12, 0.82);
     }
 
     .field-input::placeholder {
@@ -561,7 +561,7 @@
       justify-content: space-between;
       gap: 14px;
       padding: 16px 18px;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+      border-bottom: 1px solid rgba(76, 76, 76, 0.08);
       transition: background 200ms ease, transform 200ms ease;
     }
 
@@ -570,7 +570,7 @@
     }
 
     .order-item:hover {
-      background: rgba(37, 99, 235, 0.05);
+      background: rgba(136, 136, 136, 0.05);
     }
 
     .order-item-id {
@@ -621,9 +621,9 @@
     }
 
     .status-badge.confirmed {
-      background: rgba(59, 130, 246, 0.12);
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      color: #60a5fa;
+      background: rgba(152, 152, 152, 0.12);
+      border: 1px solid rgba(76, 76, 76, 0.3);
+      color: #c1c1c1;
     }
 
     .status-badge.delivered {
@@ -639,9 +639,9 @@
     }
 
     .status-badge.waiting_admin {
-      background: rgba(99, 102, 241, 0.1);
-      border: 1px solid rgba(99, 102, 241, 0.3);
-      color: #a5b4fc;
+      background: rgba(170, 170, 170, 0.1);
+      border: 1px solid rgba(76, 76, 76, 0.3);
+      color: #e5e5e5;
     }
 
     .inventory-toolbar {
@@ -658,8 +658,8 @@
       min-height: 50px;
       padding: 0 15px;
       border-radius: 16px;
-      background: rgba(10, 15, 32, 0.78);
-      border: 1px solid rgba(148, 163, 184, 0.16);
+      background: rgba(21, 21, 21, 0.78);
+      border: 1px solid rgba(76, 76, 76, 0.16);
       color: var(--muted);
     }
 
@@ -673,7 +673,7 @@
     }
 
     .inventory-search input::placeholder {
-      color: #6b7a98;
+      color: #dbdbdb;
     }
 
     .inventory-limit {
@@ -681,8 +681,8 @@
       min-height: 50px;
       padding: 0 14px;
       border-radius: 16px;
-      border: 1px solid rgba(148, 163, 184, 0.16);
-      background: rgba(10, 15, 32, 0.78);
+      border: 1px solid rgba(76, 76, 76, 0.16);
+      background: rgba(21, 21, 21, 0.78);
       color: var(--text);
       font: inherit;
       outline: none;
@@ -705,16 +705,16 @@
       gap: 16px;
       padding: 18px;
       border-radius: 22px;
-      border: 1px solid rgba(148, 163, 184, 0.14);
-      background: linear-gradient(180deg, rgba(9, 15, 34, 0.94), rgba(6, 10, 24, 0.9));
+      border: 1px solid rgba(76, 76, 76, 0.14);
+      background: linear-gradient(180deg, rgba(22, 22, 22, 0.94), rgba(15, 15, 15, 0.9));
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
       transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
     }
 
     .inventory-card:hover {
       transform: translateY(-2px);
-      border-color: rgba(96, 165, 250, 0.28);
-      box-shadow: 0 18px 34px rgba(2, 6, 23, 0.34);
+      border-color: rgba(76, 76, 76, 0.28);
+      box-shadow: 0 18px 34px rgba(12, 12, 12, 0.187);
     }
 
     .inventory-card-thumb,
@@ -723,8 +723,8 @@
       height: 94px;
       border-radius: 18px;
       overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.14);
-      background: rgba(15, 23, 42, 0.74);
+      border: 1px solid rgba(76, 76, 76, 0.14);
+      background: rgba(28, 28, 28, 0.74);
     }
 
     .inventory-card-thumb img {
@@ -738,7 +738,7 @@
     .inventory-modal-image-fallback {
       display: grid;
       place-items: center;
-      color: #60a5fa;
+      color: #c1c1c1;
     }
 
     .inventory-card-body {
@@ -781,12 +781,12 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 7px;
-      color: #9fb0d1;
+      color: #cccccc;
       font-size: 0.82rem;
     }
 
     .inventory-platform {
-      color: #93c5fd;
+      color: #dcdcdc;
       font-weight: 700;
       letter-spacing: 0.02em;
     }
@@ -811,7 +811,7 @@
     }
 
     .inventory-card-order {
-      color: #6b7a98;
+      color: #dbdbdb;
       font-size: 0.76rem;
       font-family: 'Kanit', 'Segoe UI', Tahoma, sans-serif;
     }
@@ -846,9 +846,9 @@
       gap: 6px;
       padding: 6px 12px;
       border-radius: 999px;
-      background: rgba(37, 99, 235, 0.12);
-      border: 1px solid rgba(96, 165, 250, 0.18);
-      color: #bfdbfe;
+      background: rgba(136, 136, 136, 0.12);
+      border: 1px solid rgba(76, 76, 76, 0.18);
+      color: #f3f3f3;
       font-size: 0.76rem;
       font-weight: 700;
     }
@@ -857,8 +857,8 @@
       text-align: center;
       padding: 48px 24px;
       border-radius: 20px;
-      border: 1px dashed rgba(148, 163, 184, 0.16);
-      background: rgba(7, 13, 30, 0.42);
+      border: 1px dashed rgba(76, 76, 76, 0.16);
+      background: rgba(18, 18, 18, 0.42);
       color: var(--muted);
     }
 
@@ -881,12 +881,12 @@
       gap: 14px;
       padding: 42px 24px;
       overflow: hidden;
-      border: 1px solid rgba(96, 165, 250, 0.14);
+      border: 1px solid rgba(76, 76, 76, 0.14);
       border-radius: 22px;
       background:
-        radial-gradient(circle at 50% 0%, rgba(96, 165, 250, 0.16), transparent 48%),
-        linear-gradient(135deg, rgba(8, 13, 28, 0.72), rgba(15, 23, 42, 0.5));
-      color: #cbd5e1;
+        radial-gradient(circle at 50% 0%, rgba(173, 173, 173, 0.16), transparent 48%),
+        linear-gradient(135deg, rgba(18, 18, 18, 0.72), rgba(28, 28, 28, 0.5));
+      color: #eaeaea;
       text-align: center;
     }
 
@@ -895,7 +895,7 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(110deg, transparent 0%, rgba(96, 165, 250, 0.08) 34%, transparent 62%);
+        linear-gradient(110deg, transparent 0%, rgba(173, 173, 173, 0.08) 34%, transparent 62%);
       transform: translateX(-100%);
       animation: profileLoadingSheen 1.7s ease-in-out infinite;
       pointer-events: none;
@@ -907,20 +907,20 @@
       width: 54px;
       height: 54px;
       place-items: center;
-      border: 1px solid rgba(96, 165, 250, 0.26);
+      border: 1px solid rgba(76, 76, 76, 0.26);
       border-radius: 18px;
       background:
-        radial-gradient(circle at 35% 25%, rgba(147, 197, 253, 0.28), transparent 36%),
-        rgba(37, 99, 235, 0.12);
-      color: #bfdbfe;
-      box-shadow: 0 18px 42px rgba(37, 99, 235, 0.16);
+        radial-gradient(circle at 35% 25%, rgba(200, 200, 200, 0.28), transparent 36%),
+        rgba(136, 136, 136, 0.12);
+      color: #f3f3f3;
+      box-shadow: 0 18px 42px rgba(128, 128, 128, 0.088);
     }
 
     .profile-loading-orb::after {
       content: '';
       position: absolute;
       inset: -5px;
-      border: 1px solid rgba(96, 165, 250, 0.32);
+      border: 1px solid rgba(76, 76, 76, 0.32);
       border-top-color: rgba(255, 255, 255, 0.92);
       border-radius: 21px;
       animation: profileSpin 0.9s linear infinite;
@@ -947,7 +947,7 @@
     }
 
     .profile-loading-copy span {
-      color: #94a3b8;
+      color: #bababa;
       font-size: 0.82rem;
     }
 
@@ -962,8 +962,8 @@
       width: 6px;
       height: 6px;
       border-radius: 999px;
-      background: #60a5fa;
-      box-shadow: 0 0 12px rgba(96, 165, 250, 0.5);
+      background: #3d3d3d;
+      box-shadow: 0 0 12px rgba(128, 128, 128, 0.275);
       animation: profileDotPulse 0.9s ease-in-out infinite;
     }
 
@@ -988,7 +988,7 @@
       height: 10px;
       border-radius: 999px;
       background:
-        linear-gradient(90deg, rgba(30, 41, 59, 0.58), rgba(96, 165, 250, 0.18), rgba(30, 41, 59, 0.58));
+        linear-gradient(90deg, rgba(44, 44, 44, 0.58), rgba(173, 173, 173, 0.18), rgba(44, 44, 44, 0.58));
       background-size: 220% 100%;
       animation: profileSkeleton 1.25s linear infinite;
     }
@@ -1008,7 +1008,7 @@
       width: 18px;
       height: 18px;
       place-items: center;
-      color: #bfdbfe;
+      color: #f3f3f3;
       vertical-align: -3px;
     }
 
@@ -1018,25 +1018,25 @@
     }
 
     .inventory-count-badge.is-loading {
-      border-color: rgba(96, 165, 250, 0.34);
-      color: #dbeafe;
-      box-shadow: 0 0 18px rgba(37, 99, 235, 0.13);
+      border-color: rgba(76, 76, 76, 0.34);
+      color: #f5f5f5;
+      box-shadow: 0 0 18px rgba(128, 128, 128, 0.072);
     }
 
     .inventory-count-badge.is-loading::before {
       content: '';
       width: 10px;
       height: 10px;
-      border: 2px solid rgba(96, 165, 250, 0.24);
-      border-top-color: #bfdbfe;
+      border: 2px solid rgba(76, 76, 76, 0.24);
+      border-top-color: #4c4c4c;
       border-radius: 50%;
       animation: profileSpin 0.8s linear infinite;
     }
 
     .profile-panel.is-refreshing .panel-card {
       box-shadow:
-        0 0 0 1px rgba(96, 165, 250, 0.08),
-        0 18px 46px rgba(37, 99, 235, 0.08);
+        0 0 0 1px rgba(128, 128, 128, 0.044),
+        0 18px 46px rgba(128, 128, 128, 0.044);
     }
 
     @keyframes profileSpin {
@@ -1112,7 +1112,7 @@
       gap: 12px;
       padding: 14px 18px;
       border-radius: 12px;
-      background: rgba(15, 23, 42, 0.95);
+      background: rgba(28, 28, 28, 0.95);
       border: 1px solid rgba(16, 185, 129, 0.4);
       color: var(--text);
       font-size: 0.88rem;
@@ -1134,10 +1134,10 @@
       justify-content: center;
       min-height: 32px;
       padding: 5px 12px;
-      border: 1px solid rgba(96, 165, 250, 0.55);
+      border: 1px solid rgba(76, 76, 76, 0.55);
       border-radius: 8px;
-      background: rgba(37, 99, 235, 0.18);
-      color: #bfdbfe;
+      background: rgba(136, 136, 136, 0.18);
+      color: #f3f3f3;
       font: inherit;
       font-size: 0.78rem;
       font-weight: 600;
@@ -1147,9 +1147,9 @@
 
     .toast .toast-action:hover,
     .toast .toast-action:focus-visible {
-      background: rgba(37, 99, 235, 0.34);
-      border-color: #60a5fa;
-      color: #eff6ff;
+      background: rgba(136, 136, 136, 0.34);
+      border-color: #4c4c4c;
+      color: #f5f5f5;
     }
 
     .toast.is-leaving {
@@ -1196,7 +1196,7 @@
     .inventory-modal-backdrop {
       position: absolute;
       inset: 0;
-      background: rgba(2, 6, 23, 0.78);
+      background: rgba(12, 12, 12, 0.78);
       backdrop-filter: blur(12px);
     }
 
@@ -1206,9 +1206,9 @@
       max-height: min(88vh, 900px);
       overflow: auto;
       border-radius: 28px;
-      border: 1px solid rgba(148, 163, 184, 0.18);
-      background: linear-gradient(180deg, rgba(8, 14, 30, 0.98), rgba(4, 8, 20, 0.96));
-      box-shadow: 0 30px 90px rgba(2, 6, 23, 0.55);
+      border: 1px solid rgba(76, 76, 76, 0.18);
+      background: linear-gradient(180deg, rgba(19, 19, 19, 0.98), rgba(12, 12, 12, 0.96));
+      box-shadow: 0 30px 90px rgba(12, 12, 12, 0.303);
       padding: 24px;
     }
 
@@ -1221,7 +1221,7 @@
       height: 38px;
       place-items: center;
       border-radius: 12px;
-      border: 1px solid rgba(148, 163, 184, 0.18);
+      border: 1px solid rgba(76, 76, 76, 0.18);
       background: rgba(255, 255, 255, 0.04);
       color: var(--text);
       cursor: pointer;
@@ -1245,8 +1245,8 @@
 
     .inventory-modal-image-wrap {
       overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.14);
-      background: rgba(15, 23, 42, 0.74);
+      border: 1px solid rgba(76, 76, 76, 0.14);
+      background: rgba(28, 28, 28, 0.74);
     }
 
     .inventory-modal-image {
@@ -1268,9 +1268,9 @@
       min-height: 28px;
       padding: 0 10px;
       border-radius: 999px;
-      background: rgba(37, 99, 235, 0.12);
-      border: 1px solid rgba(96, 165, 250, 0.16);
-      color: #bfdbfe;
+      background: rgba(136, 136, 136, 0.12);
+      border: 1px solid rgba(76, 76, 76, 0.16);
+      color: #f3f3f3;
       font-size: 0.74rem;
       font-weight: 700;
     }
@@ -1323,9 +1323,9 @@
     }
 
     .inventory-copy-button.secondary {
-      border-color: rgba(96, 165, 250, 0.22);
-      background: rgba(37, 99, 235, 0.12);
-      color: #dbeafe;
+      border-color: rgba(76, 76, 76, 0.22);
+      background: rgba(136, 136, 136, 0.12);
+      color: #f5f5f5;
     }
 
     .payment-verified-badge {
@@ -1357,15 +1357,15 @@
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #6b7a98;
+      color: #dbdbdb;
     }
 
     .inventory-detail-panel {
       margin-top: 10px;
       padding: 16px;
       border-radius: 18px;
-      border: 1px solid rgba(148, 163, 184, 0.14);
-      background: rgba(2, 6, 23, 0.76);
+      border: 1px solid rgba(76, 76, 76, 0.14);
+      background: rgba(12, 12, 12, 0.76);
     }
 
     .inventory-product-number {
@@ -1378,9 +1378,9 @@
       align-items: center;
       gap: 12px;
       padding: 12px;
-      border: 1px solid rgba(96, 165, 250, 0.28);
+      border: 1px solid rgba(76, 76, 76, 0.28);
       border-radius: 12px;
-      background: linear-gradient(135deg, rgba(30, 64, 175, 0.18), rgba(8, 47, 73, 0.28));
+      background: linear-gradient(135deg, rgba(102, 102, 102, 0.18), rgba(40, 40, 40, 0.28));
     }
 
     .inventory-product-number-copy {
@@ -1393,7 +1393,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      color: #93c5fd;
+      color: #dcdcdc;
       font-size: 0.72rem;
       font-weight: 700;
     }
@@ -1426,15 +1426,15 @@
     }
 
     .inventory-product-number-actions .inventory-copy-button.compact {
-      border-color: rgba(96, 165, 250, 0.35);
-      background: rgba(37, 99, 235, 0.18);
-      color: #dbeafe;
+      border-color: rgba(76, 76, 76, 0.35);
+      background: rgba(136, 136, 136, 0.18);
+      color: #f5f5f5;
     }
 
     .inventory-product-number-actions .inventory-copy-button.contact {
-      border-color: rgba(34, 211, 238, 0.32);
-      background: rgba(8, 145, 178, 0.16);
-      color: #cffafe;
+      border-color: rgba(76, 76, 76, 0.32);
+      background: rgba(93, 93, 93, 0.16);
+      color: #f5f5f5;
     }
 
     .inventory-order-countdown-wrap {
@@ -1462,7 +1462,7 @@
       font-family: 'Kanit', 'Segoe UI', Tahoma, sans-serif;
       font-size: 0.84rem;
       line-height: 1.65;
-      color: #e2e8f0;
+      color: #f5f5f5;
     }
 
     .inventory-account-list,
@@ -1474,17 +1474,17 @@
 
     .inventory-delivery-set h4 {
       margin: 0;
-      color: #cbd5e1;
+      color: #eaeaea;
       font-size: 0.8rem;
     }
 
     .inventory-account-card {
       min-width: 0;
       overflow: hidden;
-      border: 1px solid #263854;
-      border-left: 3px solid #3b82f6;
+      border: 1px solid #3d3d3d;
+      border-left: 3px solid #4c4c4c;
       border-radius: 8px;
-      background: #071124;
+      background: #161616;
     }
 
     .inventory-account-ea {
@@ -1492,33 +1492,33 @@
     }
 
     .inventory-account-ubisoft {
-      border-left-color: #8b5cf6;
+      border-left-color: #4c4c4c;
     }
 
     .inventory-account-webmail {
-      border-left-color: #22d3ee;
-      background: linear-gradient(135deg, #071124 0%, #06232d 100%);
+      border-left-color: #4c4c4c;
+      background: linear-gradient(135deg, #161616 0%, #1a1a1a 100%);
     }
 
     .inventory-account-rockstar {
       border-left-color: #facc15;
-      background: linear-gradient(135deg, #071124 0%, #2a2106 100%);
+      background: linear-gradient(135deg, #161616 0%, #2a2106 100%);
     }
 
     .inventory-account-microsoft {
       border-left-color: #22c55e;
-      background: linear-gradient(135deg, #071124 0%, #082616 100%);
+      background: linear-gradient(135deg, #161616 0%, #082616 100%);
     }
 
-    .inventory-account-webmail h5 { color: #67e8f9; }
+    .inventory-account-webmail h5 { color: #c4c4c4; }
     .inventory-account-rockstar h5 { color: #fde047; }
     .inventory-account-microsoft h5 { color: #86efac; }
 
     .inventory-account-card h5 {
       margin: 0;
       padding: 10px 12px;
-      border-bottom: 1px solid #1e304b;
-      color: #eff6ff;
+      border-bottom: 1px solid #343434;
+      color: #f5f5f5;
       font-size: 0.78rem;
       letter-spacing: 0;
     }
@@ -1533,18 +1533,18 @@
     }
 
     .inventory-account-field + .inventory-account-field {
-      border-top: 1px solid #16243b;
+      border-top: 1px solid #282828;
     }
 
     .inventory-account-field span {
-      color: #7f8da8;
+      color: #dbdbdb;
       font-size: 0.72rem;
     }
 
     .inventory-account-field code {
       min-width: 0;
       overflow-wrap: anywhere;
-      color: #e2e8f0;
+      color: #f5f5f5;
       font-size: 0.78rem;
       white-space: normal;
     }
@@ -1556,16 +1556,16 @@
       width: 34px;
       height: 34px;
       padding: 0;
-      border: 1px solid #334b70;
+      border: 1px solid #4c4c4c;
       border-radius: 7px;
-      background: #0d1b32;
-      color: #bfdbfe;
+      background: #202020;
+      color: #f3f3f3;
       cursor: pointer;
     }
 
     .inventory-account-field button:hover {
-      border-color: #60a5fa;
-      background: #122747;
+      border-color: #4c4c4c;
+      background: #2c2c2c;
     }
 
     .inventory-account-field button svg {
@@ -1589,7 +1589,7 @@
 
     /* Unified account dashboard: restrained, flat and consistent with the storefront. */
     body.profile-page {
-      background: #020817;
+      background: #0c0c0c;
     }
 
     .profile-shell::before,
@@ -1614,9 +1614,9 @@
     .profile-sidebar-card,
     .profile-sidebar-logout,
     .panel-card {
-      border: 1px solid #1e2a40;
+      border: 1px solid #2f2f2f;
       border-radius: 12px;
-      background: #071022;
+      background: #141414;
       box-shadow: none;
       backdrop-filter: none;
     }
@@ -1629,14 +1629,14 @@
 
     .profile-sidebar-user {
       padding: 8px 8px 18px;
-      border-bottom-color: #1e2a40;
+      border-bottom-color: #2f2f2f;
     }
 
     .profile-avatar {
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: #2563eb;
+      background: #3d3d3d;
       box-shadow: none;
       font-size: 1.1rem;
     }
@@ -1644,7 +1644,7 @@
     .profile-avatar-badge {
       width: 18px;
       height: 18px;
-      border-color: #071022;
+      border-color: #141414;
     }
 
     .profile-sidebar-copy h2 {
@@ -1653,7 +1653,7 @@
 
     .profile-sidebar-copy p {
       font-size: 0.76rem;
-      color: #91a0b8;
+      color: #b9b9b9;
     }
 
     .profile-sidebar-nav {
@@ -1667,19 +1667,19 @@
       min-height: 42px;
       padding: 0 12px;
       border-radius: 8px;
-      color: #98a6bc;
+      color: #bebebe;
       font-size: 0.86rem;
       font-weight: 500;
     }
 
     .profile-nav-item:hover {
-      color: #dbeafe;
-      background: #0d1930;
+      color: #f5f5f5;
+      background: #1e1e1e;
     }
 
     .profile-nav-item.is-active {
-      color: #60a5fa;
-      background: #0c2250;
+      color: #c1c1c1;
+      background: #2e2e2e;
       box-shadow: none;
     }
 
@@ -1687,13 +1687,13 @@
       min-height: 58px;
       border-radius: 12px;
       color: #f87171;
-      background: #071022;
+      background: #141414;
     }
 
     .panel-card-header {
       min-height: 96px;
       padding: 22px 24px;
-      border-bottom-color: #1e2a40;
+      border-bottom-color: #2f2f2f;
     }
 
     .panel-title-copy h3 {
@@ -1708,12 +1708,12 @@
     .panel-title-copy h3 svg {
       width: 21px;
       height: 21px;
-      color: #3b82f6;
+      color: #dbdbdb;
     }
 
     .panel-title-copy p {
       margin: 3px 0 0;
-      color: #7890b1;
+      color: #dbdbdb;
       font-size: 0.78rem;
     }
 
@@ -1726,9 +1726,9 @@
       min-height: 36px;
       padding: 0 12px;
       border-radius: 8px;
-      background: #0a1427;
-      border-color: #25334b;
-      color: #b7c2d4;
+      background: #181818;
+      border-color: #383838;
+      color: #dadada;
       font-weight: 500;
     }
 
@@ -1740,14 +1740,14 @@
     .inventory-limit {
       min-height: 42px;
       border-radius: 8px;
-      border-color: #26344d;
-      background: #081226;
+      border-color: #393939;
+      background: #171717;
     }
 
     .inventory-count-badge {
       width: max-content;
       border-radius: 6px;
-      color: #94a3b8;
+      color: #bababa;
       background: transparent;
       border-color: transparent;
       padding-left: 0;
@@ -1763,14 +1763,14 @@
       min-height: 116px;
       padding: 16px;
       border-radius: 10px;
-      border-color: #1f2d45;
-      background: #050d1e;
+      border-color: #323232;
+      background: #121212;
       box-shadow: none;
     }
 
     .inventory-card:hover {
       transform: none;
-      border-color: #354764;
+      border-color: #4c4c4c;
       box-shadow: none;
     }
 
@@ -1779,7 +1779,7 @@
       width: 64px;
       height: 64px;
       border-radius: 8px;
-      border-color: #26344d;
+      border-color: #393939;
     }
 
     .inventory-card-title {
@@ -1794,7 +1794,7 @@
     }
 
     .inventory-card-status {
-      color: #93c5fd;
+      color: #dcdcdc;
       font-size: 0.72rem;
       font-weight: 500;
     }
@@ -1805,7 +1805,7 @@
     }
 
     .inventory-card-status.status-waiting_admin {
-      color: #a5b4fc;
+      color: #e5e5e5;
     }
 
     .inventory-card-status.status-delivered {
@@ -1813,13 +1813,13 @@
     }
 
     .inventory-card-subtitle {
-      color: #75849e;
+      color: #dbdbdb;
       font-size: 0.75rem;
     }
 
     .inventory-card-note {
       min-height: 0;
-      color: #70809a;
+      color: #dbdbdb;
       font-size: 0.72rem;
       -webkit-line-clamp: 1;
     }
@@ -1833,9 +1833,9 @@
       min-height: 34px;
       padding: 0 11px;
       border-radius: 7px;
-      border-color: #334155;
-      background: #0a1427;
-      color: #dbeafe;
+      border-color: #444444;
+      background: #181818;
+      color: #f5f5f5;
       box-shadow: none;
       font-size: 0.76rem;
       font-weight: 500;
@@ -1845,8 +1845,8 @@
     .inventory-copy-button:hover:not(:disabled) {
       transform: none;
       filter: none;
-      border-color: #4b6590;
-      background: #101d34;
+      border-color: #4c4c4c;
+      background: #222222;
     }
 
     .status-badge {
@@ -1854,9 +1854,9 @@
       align-self: flex-start;
       padding: 4px 8px;
       border-radius: 6px;
-      background: #101a2d;
-      border: 1px solid #2a3851;
-      color: #aab7ca;
+      background: #1e1e1e;
+      border: 1px solid #3d3d3d;
+      color: #cecece;
       font-size: 0.68rem;
       white-space: nowrap;
     }
@@ -1869,15 +1869,15 @@
     }
 
     .status-badge.waiting_admin {
-      border-color: rgba(99, 102, 241, 0.3);
-      background: rgba(99, 102, 241, 0.09);
-      color: #a5b4fc;
+      border-color: rgba(76, 76, 76, 0.3);
+      background: rgba(170, 170, 170, 0.09);
+      color: #e5e5e5;
     }
 
     .status-badge.confirmed {
-      border-color: rgba(59, 130, 246, 0.3);
-      background: rgba(59, 130, 246, 0.09);
-      color: #93c5fd;
+      border-color: rgba(76, 76, 76, 0.3);
+      background: rgba(152, 152, 152, 0.09);
+      color: #dcdcdc;
     }
 
     .status-badge.delivered {
@@ -1892,7 +1892,7 @@
       align-items: center;
       gap: 18px;
       padding: 17px 20px;
-      border-bottom: 1px solid #162239;
+      border-bottom: 1px solid #282828;
     }
 
     .profile-order-row:last-child {
@@ -1915,7 +1915,7 @@
 
     .profile-order-delivery > p {
       margin: 0;
-      color: #93a4bf;
+      color: #bdbdbd;
       font-size: 0.76rem;
     }
 
@@ -1923,7 +1923,7 @@
       margin: 0;
       overflow-wrap: anywhere;
       white-space: pre-wrap;
-      color: #dbeafe;
+      color: #f5f5f5;
       font: 0.78rem/1.6 'Kanit', sans-serif;
     }
 
@@ -1945,9 +1945,9 @@
     .profile-order-payment-alert a {
       flex: 0 0 auto;
       padding: 5px 11px;
-      border: 1px solid rgba(96, 165, 250, 0.55);
+      border: 1px solid rgba(76, 76, 76, 0.55);
       border-radius: 7px;
-      color: #bfdbfe;
+      color: #f3f3f3;
       text-decoration: none;
       white-space: nowrap;
     }
@@ -1958,10 +1958,10 @@
       gap: 6px;
       min-height: 34px;
       padding: 0 11px;
-      border: 1px solid #334155;
+      border: 1px solid #444444;
       border-radius: 7px;
-      background: #0a1427;
-      color: #b7c5da;
+      background: #181818;
+      color: #dddddd;
       font: inherit;
       font-size: 0.74rem;
       cursor: pointer;
@@ -1970,8 +1970,8 @@
     .inventory-modal-dialog {
       max-width: 760px;
       border-radius: 12px;
-      border-color: #27354d;
-      background: #071022;
+      border-color: #3a3a3a;
+      background: #141414;
       box-shadow: 0 28px 80px rgba(0, 0, 0, 0.58);
     }
 
@@ -1980,7 +1980,7 @@
       gap: 13px;
       margin-top: 16px;
       padding-top: 16px;
-      border-top: 1px solid #1e2a40;
+      border-top: 1px solid #2f2f2f;
     }
 
     .inventory-order-timeline {
@@ -1994,17 +1994,17 @@
       place-items: center;
       gap: 5px;
       min-height: 66px;
-      border: 1px solid #26344d;
+      border: 1px solid #393939;
       border-radius: 8px;
-      color: #65758e;
-      background: #050d1e;
+      color: #dbdbdb;
+      background: #121212;
       text-align: center;
     }
 
     .inventory-order-timeline span.is-complete {
-      border-color: #31598d;
-      color: #93c5fd;
-      background: #0a1931;
+      border-color: #4c4c4c;
+      color: #dcdcdc;
+      background: #1e1e1e;
     }
 
     .inventory-order-timeline svg {
@@ -2017,13 +2017,13 @@
       align-items: center;
       gap: 12px;
       padding: 11px 13px;
-      border: 1px solid #26344d;
+      border: 1px solid #393939;
       border-radius: 8px;
-      background: #050d1e;
+      background: #121212;
     }
 
     .inventory-order-summary span {
-      color: #7788a2;
+      color: #dbdbdb;
     }
 
     .inventory-order-summary strong {
@@ -2032,7 +2032,7 @@
 
     .inventory-order-summary em {
       margin-left: auto;
-      color: #93c5fd;
+      color: #dcdcdc;
       font-style: normal;
       font-size: 0.76rem;
     }
@@ -2053,10 +2053,10 @@
       gap: 8px;
       min-height: 40px;
       padding: 0 13px;
-      border: 1px solid #334155;
+      border: 1px solid #444444;
       border-radius: 8px;
-      background: #0a1427;
-      color: #c6d1e2;
+      background: #181818;
+      color: #e8e8e8;
       font: inherit;
       cursor: pointer;
     }
@@ -2066,9 +2066,9 @@
     }
 
     .inventory-slip-form button {
-      border-color: #31598d;
-      background: #12305c;
-      color: #dbeafe;
+      border-color: #4c4c4c;
+      background: #373737;
+      color: #f5f5f5;
     }
 
     .inventory-cancel-order {
@@ -2084,10 +2084,10 @@
       gap: 8px;
       margin: 0;
       padding: 11px 13px;
-      border: 1px solid #2b3a55;
+      border: 1px solid #404040;
       border-radius: 8px;
-      color: #9fb0c9;
-      background: #081326;
+      color: #c8c8c8;
+      background: #171717;
     }
 
     .inventory-order-message.is-success {
@@ -2101,9 +2101,9 @@
       align-items: center;
       gap: 14px;
       padding: 13px;
-      border: 1px solid #26344d;
+      border: 1px solid #393939;
       border-radius: 8px;
-      background: #050d1e;
+      background: #121212;
     }
 
     .inventory-payment-box img {
@@ -2125,14 +2125,14 @@
     .inventory-payment-box small {
       display: block;
       margin: 5px 0 0;
-      color: #8fa0b9;
+      color: #b8b8b8;
       font-size: 0.76rem;
       line-height: 1.55;
     }
 
     .inventory-slip-preview {
       width: max-content;
-      color: #93c5fd;
+      color: #dcdcdc;
       text-decoration: none;
     }
 
@@ -2352,10 +2352,10 @@
       flex: 0 1 150px;
       min-width: 132px;
       min-height: 40px;
-      border: 1px solid rgba(88, 101, 242, 0.56);
+      border: 1px solid rgba(76, 76, 76, 0.56);
       border-radius: 8px;
-      background: rgba(88, 101, 242, 0.16);
-      color: #c7d2fe;
+      background: rgba(165, 165, 165, 0.16);
+      color: #f5f5f5;
       box-shadow: none;
       font-size: 0.8rem;
       font-weight: 600;
@@ -2363,9 +2363,9 @@
     }
 
     .inventory-modal-copy .inventory-copy-button.secondary:hover {
-      border-color: rgba(88, 101, 242, 0.82);
-      background: rgba(88, 101, 242, 0.28);
-      color: #eef2ff;
+      border-color: rgba(76, 76, 76, 0.82);
+      background: rgba(165, 165, 165, 0.28);
+      color: #f5f5f5;
       transform: translateY(-1px);
     }
 
@@ -2388,8 +2388,8 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
       padding: 14px;
-      border-bottom: 1px solid #162239;
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.10), rgba(15, 23, 42, 0.24));
+      border-bottom: 1px solid #282828;
+      background: linear-gradient(135deg, rgba(152, 152, 152, 0.1), rgba(28, 28, 28, 0.24));
     }
 
     .profile-orders-summary > div {
@@ -2397,19 +2397,19 @@
       gap: 3px;
       min-width: 0;
       padding: 12px 14px;
-      border: 1px solid rgba(96, 165, 250, 0.18);
+      border: 1px solid rgba(76, 76, 76, 0.18);
       border-radius: 14px;
-      background: rgba(2, 6, 23, 0.34);
+      background: rgba(12, 12, 12, 0.34);
     }
 
     .profile-orders-summary span,
     .profile-orders-table-head {
-      color: #8ea3c1;
+      color: #bcbcbc;
       font-size: 0.76rem;
     }
 
     .profile-orders-summary strong {
-      color: #e5efff;
+      color: #f5f5f5;
       font-size: 1.05rem;
       font-weight: 500;
     }
@@ -2424,8 +2424,8 @@
 
     .profile-orders-table-head {
       padding: 10px 20px;
-      border-bottom: 1px solid #162239;
-      background: rgba(2, 6, 23, 0.28);
+      border-bottom: 1px solid #282828;
+      background: rgba(12, 12, 12, 0.28);
       letter-spacing: 0.01em;
     }
 
@@ -2447,7 +2447,7 @@
     }
 
     .profile-order-point-line {
-      color: #bfdbfe;
+      color: #f3f3f3;
       font-size: 0.73rem;
     }
 
@@ -2485,7 +2485,7 @@
 
       .profile-order-cell::before {
         content: attr(data-label);
-        color: #7d91b0;
+        color: #dbdbdb;
         font-size: 0.72rem;
       }
 
@@ -2510,16 +2510,16 @@
 
     /* Inventory polish v25 */
     .profile-page #panel-inventory .panel-card {
-      border-color: rgba(120, 160, 255, 0.16);
+      border-color: rgba(76, 76, 76, 0.16);
       background:
-        radial-gradient(circle at 14% 0%, rgba(59, 130, 246, 0.10), transparent 28rem),
-        linear-gradient(180deg, rgba(8, 14, 32, 0.88), rgba(5, 10, 24, 0.94));
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035), 0 18px 48px rgba(2, 6, 23, 0.22);
+        radial-gradient(circle at 14% 0%, rgba(152, 152, 152, 0.1), transparent 28rem),
+        linear-gradient(180deg, rgba(20, 20, 20, 0.88), rgba(14, 14, 14, 0.94));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035), 0 18px 48px rgba(12, 12, 12, 0.121);
     }
 
     .profile-page #panel-inventory .panel-card-header {
       min-height: 84px;
-      border-bottom-color: rgba(120, 160, 255, 0.12);
+      border-bottom-color: rgba(76, 76, 76, 0.12);
     }
 
     .profile-page #panel-inventory .panel-card-header h3 {
@@ -2532,14 +2532,14 @@
     .profile-page #panel-inventory .panel-card-header h3 svg {
       width: 18px;
       height: 18px;
-      color: #93c5fd;
-      filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.26));
+      color: #dcdcdc;
+      filter: drop-shadow(0 0 10px rgba(128, 128, 128, 0.143));
     }
 
     .profile-page #panel-inventory .panel-title-copy p {
       font-size: 0.74rem;
       font-weight: 300;
-      color: #8191ad;
+      color: #dbdbdb;
     }
 
     .profile-page .inventory-toolbar {
@@ -2551,9 +2551,9 @@
     .profile-page .inventory-limit {
       min-height: 40px;
       border-radius: 12px;
-      border-color: rgba(112, 145, 200, 0.16);
-      background: rgba(7, 13, 29, 0.72);
-      color: #dbeafe;
+      border-color: rgba(76, 76, 76, 0.16);
+      background: rgba(18, 18, 18, 0.72);
+      color: #f5f5f5;
       font-size: 0.82rem;
       font-weight: 300;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
@@ -2561,14 +2561,14 @@
 
     .profile-page .inventory-search:focus-within,
     .profile-page .inventory-limit:focus {
-      border-color: rgba(96, 165, 250, 0.36);
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.09);
+      border-color: rgba(76, 76, 76, 0.36);
+      box-shadow: 0 0 0 3px rgba(128, 128, 128, 0.05);
     }
 
     .profile-page .inventory-count-badge {
       margin-top: 10px;
       padding: 0;
-      color: #7f8ca5;
+      color: #dbdbdb;
       font-size: 0.72rem;
       font-weight: 300;
       background: transparent;
@@ -2586,21 +2586,21 @@
       min-height: 104px;
       padding: 13px;
       border-radius: 16px;
-      border-color: rgba(120, 160, 255, 0.14);
+      border-color: rgba(76, 76, 76, 0.14);
       background:
-        radial-gradient(circle at left top, rgba(96, 165, 250, 0.10), transparent 42%),
-        linear-gradient(135deg, rgba(13, 24, 48, 0.82), rgba(5, 10, 24, 0.88));
+        radial-gradient(circle at left top, rgba(173, 173, 173, 0.1), transparent 42%),
+        linear-gradient(135deg, rgba(30, 30, 30, 0.82), rgba(14, 14, 14, 0.88));
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
       transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
     }
 
     .profile-page .inventory-card:hover {
       transform: translateY(-1px);
-      border-color: rgba(147, 197, 253, 0.28);
-      box-shadow: 0 12px 28px rgba(2, 6, 23, 0.22);
+      border-color: rgba(76, 76, 76, 0.28);
+      box-shadow: 0 12px 28px rgba(12, 12, 12, 0.121);
       background:
-        radial-gradient(circle at left top, rgba(96, 165, 250, 0.14), transparent 42%),
-        linear-gradient(135deg, rgba(15, 29, 57, 0.86), rgba(5, 10, 24, 0.9));
+        radial-gradient(circle at left top, rgba(173, 173, 173, 0.14), transparent 42%),
+        linear-gradient(135deg, rgba(36, 36, 36, 0.86), rgba(14, 14, 14, 0.9));
     }
 
     .profile-page .inventory-card-thumb,
@@ -2608,13 +2608,13 @@
       width: 58px;
       height: 58px;
       border-radius: 14px;
-      border-color: rgba(125, 157, 220, 0.16);
-      background: rgba(15, 23, 42, 0.72);
+      border-color: rgba(76, 76, 76, 0.16);
+      background: rgba(28, 28, 28, 0.72);
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
     }
 
     .profile-page .inventory-card-thumb-empty svg {
-      color: #93c5fd;
+      color: #dcdcdc;
     }
 
     .profile-page .inventory-card-title {
@@ -2634,19 +2634,19 @@
 
     .profile-page .inventory-card-subtitle {
       gap: 5px;
-      color: #8ea0bd;
+      color: #bababa;
       font-size: 0.72rem;
       font-weight: 300;
     }
 
     .profile-page .inventory-platform {
-      color: #93c5fd;
+      color: #dcdcdc;
       font-weight: 500;
     }
 
     .profile-page .inventory-card-note {
       min-height: 0;
-      color: #7f8ca5;
+      color: #dbdbdb;
       font-size: 0.70rem;
       font-weight: 300;
       line-height: 1.45;
@@ -2661,7 +2661,7 @@
     .profile-page .inventory-card-api-meta {
       display: grid;
       gap: 2px;
-      color: #93a8c4;
+      color: #c0c0c0;
       font-size: 0.68rem;
       line-height: 1.45;
       overflow-wrap: anywhere;
@@ -2669,7 +2669,7 @@
     }
 
     .profile-page .inventory-card-order {
-      color: #7f8ca5;
+      color: #dbdbdb;
       font-size: 0.70rem;
       font-weight: 300;
     }
@@ -2678,9 +2678,9 @@
       min-height: 32px;
       padding: 0 10px;
       border-radius: 10px;
-      border-color: rgba(96, 165, 250, 0.18);
-      color: #dbeafe;
-      background: rgba(16, 29, 52, 0.82);
+      border-color: rgba(76, 76, 76, 0.18);
+      color: #f5f5f5;
+      background: rgba(34, 34, 34, 0.82);
       box-shadow: none;
       font-size: 0.72rem;
       font-weight: 500;
@@ -2688,14 +2688,14 @@
 
     .profile-page .inventory-detail-button:hover {
       transform: translateY(-1px);
-      border-color: rgba(147, 197, 253, 0.32);
-      background: rgba(22, 39, 70, 0.88);
+      border-color: rgba(76, 76, 76, 0.32);
+      background: rgba(46, 46, 46, 0.88);
     }
 
     .profile-page .inventory-detail-button svg {
       width: 14px !important;
       height: 14px !important;
-      color: #93c5fd;
+      color: #dcdcdc;
     }
 
     .profile-page .status-badge {
@@ -5347,7 +5347,7 @@
       document.getElementById('logout-btn-hidden')?.addEventListener('click', logoutToHome);
     });
   </script>
-<link rel="stylesheet" href="olaf-ui.css?v=20261122-ui2" />
+<link rel="stylesheet" href="olaf-ui.css?v=20261122-ui3" />
 </body>
 
 </html>
