@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>เช่าเกม Steam | OLAF SHOP</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260908-badges-v223">
+<link rel="stylesheet" href="site-theme-surfaces.css?v=20260919-v268">
+<link rel="stylesheet" href="site-refinements.css?v=20260912-width-search-v250">
+<link rel="stylesheet" href="site-theme-light.css?v=20260910-daylight-v244">
+<link rel="stylesheet" href="checkout-visual-fix.css?v=20260929-v61">
+<link rel="stylesheet" href="rental-store-v74.css?v=20261002-rental-v78">
+<link rel="stylesheet" href="supplier-widgets.css?v=20260925-v16">
+<link rel="stylesheet" href="supplier-vault-v22.css?v=20260927-v22">
+<link rel="stylesheet" href="rental-detail-v79.css?v=20261002-rental-v84">
+<link rel="stylesheet" href="rental-detail-v81.css?v=20261003-v94">
+<link rel="stylesheet" href="rental-detail-v82.css?v=20261002-rental-v84">
+<link rel="stylesheet" href="rental-detail-v84.css?v=20261002-rental-v84">
+<link rel="stylesheet" href="rental-vault-v87.css?v=20261002-v87">
+<script src="site-theme.js?v=20260912-original-v249"></script>
+<script src="site-header-refresh.js?v=20261001-rental-v73"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js" defer></script>
+<script src="slip-qr-scanner.js?v=20261026-wallet-qr-v3" defer></script>
+<script src="supabase-client.js?v=20261002-unpaid-v83" defer></script>
+<script src="platform-store.js?v=20260605-admin-users" defer></script>
+<script src="favorites-store.js?v=20260904-realtime-favorites-v141" defer></script>
+<script src="notifications.js?v=20260909-updates-v224" defer></script>
+<script src="site-navigation.js?v=20261002-rental-v74" defer></script>
+<script src="order-action-popup.js?v=20260621-order-animation" defer></script>
+<script src="rental-store.js?v=20261002-v87" defer></script>
+<script src="rental-native-v80.js?v=20261002-rental-v84" defer></script>
+<script src="rental-catalog-v74.js?v=20261003-v93" defer></script>
+<link rel="stylesheet" href="rental-feedback-v91.css?v=20261003-v91">
+<link rel="stylesheet" href="site-footer-v86.css?v=20261002-v86">
+<link rel="stylesheet" href="rental-catalog-v86.css?v=20261002-v86">
+</head>
+<body class="rental-site" data-rental-page="product"><div class="page">
+<header class="topbar">
+      <a class="brand" href="index.html" aria-label="OLAF SHOP">
+        <span class="brand-mark">O</span>
+        <span>
+          <strong>OLAF SHOP</strong>
+          <small>Steam Game Store</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="เมนูหลัก">
+        <a href="#home">หน้าแรก</a>
+        <a href="#catalog">สินค้า</a>
+        <a href="index.html?category=offline">Steam Offline อัตโนมัติ</a>
+        <a href="rentals.html">เช่าเกม</a>
+        <a href="more-products.html">หมวดหมู่</a>
+        <a href="products.html">ดูสินค้าทั้งหมด</a>
+        <a href="manual.html">คู่มือ</a>
+        <a href="free-games.html">รับเกมฟรี</a>
+        <a href="point-topup.html">เติมเงิน</a>
+        <a href="free-random.html">สุ่มเกม</a>
+        <a href="https://discord.gg/6axb2QbDHN" target="_blank">ติดต่อ</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <div class="language-switcher">
+          <button class="icon-button lang-toggle" id="lang-toggle" type="button" aria-label="เปลี่ยนภาษา"
+            aria-expanded="false">
+            <i data-lucide="globe"></i>
+          </button>
+          <div class="language-popover" id="language-popover" hidden>
+            <button type="button" data-lang-option="th"><strong>ภาษาไทย</strong><span>TH</span></button>
+            <button type="button" data-lang-option="en"><strong>English</strong><span>EN</span></button>
+          </div>
+        </div>
+        <div class="notification-wrap" style="position:relative">
+          <button class="icon-button notification-button" id="open-notifications" type="button" aria-label="แจ้งเตือน">
+            <i data-lucide="bell"></i>
+            <span class="notification-badge" id="notification-badge" hidden></span>
+          </button>
+          <div class="notification-popover" id="notification-popover" hidden>
+            <div class="notification-header">
+              <h3>แจ้งเตือน</h3>
+            </div>
+            <div class="notification-body" id="notification-list">
+              <div class="notification-empty">
+                <i data-lucide="bell"></i>
+                <p>ยังไม่มีแจ้งเตือน</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="icon-button favorites-button" id="open-favorites" type="button" aria-label="เปิดรายการโปรด">
+          <i data-lucide="bookmark"></i>
+          <span class="favorites-badge" id="favorites-badge" hidden></span>
+        </button>
+        <div class="user-popover-wrap" style="position:relative">
+          <button class="account-button is-auth-loading" id="open-auth" type="button" aria-busy="true">
+            <i data-lucide="loader-circle"></i>
+            <span id="account-label">กำลังโหลดข้อมูล</span>
+          </button>
+          <div class="user-popover" id="user-popover" hidden></div>
+        </div>
+        <a class="primary-button register-button" href="register.html"
+          style="display:none; padding: 0 14px; min-height: 38px; gap: 8px;">
+          <i data-lucide="user-plus"></i>
+          <span>สมัครสมาชิก</span>
+        </a>
+      </div>
+    </header>
+<main id="rental-main"><nav class="rental-breadcrumb" aria-label="เส้นทาง"><a href="index.html">หน้าหลัก</a><span>/</span><a href="rentals.html">เช่าเกม</a><span>/</span><span id="rental-crumb-title">รายละเอียดเกม</span></nav>
+<p id="rental-notice" role="status" aria-live="polite">กำลังโหลดรายละเอียดเกม…</p>
+<div id="rental-product" aria-busy="true"><div class="rental-product-skeleton" role="status"><div class="rental-skeleton"><div class="rental-skeleton-art"></div><div class="rental-skeleton-line"></div><div class="rental-skeleton-line short"></div></div><div class="rental-skeleton"><div class="rental-skeleton-art"></div><div class="rental-skeleton-line"></div><div class="rental-skeleton-line short"></div></div><span>กำลังเตรียมข้อมูลเกมและแพ็กเกจเช่า</span></div></div></main>
+<footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-gamepad-2">
+                <line x1="6" x2="10" y1="12" y2="12" />
+                <line x1="8" x2="8" y1="10" y2="14" />
+                <line x1="15" x2="15.01" y1="13" y2="13" />
+                <line x1="18" x2="18.01" y1="11" y2="11" />
+                <rect width="20" height="12" x="2" y="6" rx="2" />
+              </svg>
+            </span>
+            <span class="brand-text" data-olaf-store-name>OLAF SHOP</span>
+          </a>
+          <p>OLAF SHOP ให้บริการจำหน่ายเกมดิจิทัล บัญชีเกม และเช่าไอดี Steam พร้อมบริการช่วยเหลือ เวลา 12:00–23:00 น.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>ข้อมูลและบริการ</h4>
+          <ul>
+            <li><a href="https://olaf-shop.gitbook.io/manual-olaf-shop/undefined-1/undefined">ศูนย์ช่วยเหลือ</a></li>
+            <li><a href="https://discord.gg/6axb2QbDHN" target="_blank">ติดต่อเรา</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-payments">
+          <h4>ช่องทางชำระเงิน</h4>
+          <div class="payment-badges">
+            <span class="payment-badge">PromptPay</span>
+            <span class="payment-badge">TrueMoney Wallet</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 OLAF SHOP. สงวนลิขสิทธิ์</p>
+        <div class="footer-bottom-links">
+          <a href="https://olaf-shop.gitbook.io/manual-olaf-shop/undefined/undefined">ข้อกำหนดและเงื่อนไข</a>
+          <a href="https://olaf-shop.gitbook.io/manual-olaf-shop">นโยบายความเป็นส่วนตัว</a>
+        </div>
+      </div>
+    </footer>
+</div>
+<dialog id="rental-dialog" class="rental-booking-dialog" aria-labelledby="rental-title"><button id="rental-close" class="dialog-close" type="button" aria-label="ปิด">×</button><div id="rental-detail"></div></dialog>
+<dialog class="premium-dialog qr-payment-dialog olaf-checkout-v98" id="qr-dialog">
+    <div class="premium-dialog-inner olaf-checkout-shell">
+      <button class="dialog-close" type="button" aria-label="ปิด" data-qr-close-btn>
+        <i data-lucide="x"></i>
+      </button>
+      <div class="qr-payment-content"><p id="rental-payment-status" role="status" aria-live="polite"></p>
+        <div class="premium-dialog-header olaf-checkout-hero">
+          <div class="premium-icon-box qr-icon"><i data-lucide="circle-check-big"></i></div>
+          <h2>ยืนยันคำสั่งซื้อ</h2>
+          <p>หมายเลขคำสั่งซื้อ: <strong data-qr-order-id>#ORDER_ID</strong></p>
+        </div>
+
+        <section class="premium-product-card olaf-checkout-product olaf-checkout-qr-product">
+          <div class="premium-product-thumb qr-product-thumb" aria-hidden="true">
+            <img alt="สินค้า" loading="eager" decoding="async" data-qr-product-image hidden />
+          </div>
+          <div class="premium-product-info">
+            <h3 data-qr-product-name>ชื่อสินค้า</h3>
+            <span class="premium-product-label" data-qr-product-label>ประเภท: -</span>
+          </div>
+          <div class="premium-product-price"><strong data-qr-product-price>฿0</strong></div>
+        </section>
+
+        <section class="olaf-checkout-meta-grid">
+          <article class="olaf-checkout-meta-card">
+            <span>สถานะการชำระเงิน</span>
+            <strong class="qr-status-badge"><i data-lucide="clock-3"></i> รอการชำระเงิน</strong>
+          </article>
+          <article class="olaf-checkout-meta-card">
+            <span>วันที่สั่งซื้อ</span>
+            <strong data-qr-created-at>-</strong>
+          </article>
+        </section>
+
+        <section class="olaf-checkout-qr-card">
+          <header>
+            <h3>สแกน QR Code เพื่อชำระเงิน</h3>
+            <p>กรุณาสแกนผ่านแอปธนาคารของคุณ</p>
+          </header>
+          <div class="qr-method-badge" data-qr-method-badge>
+            <i data-lucide="qr-code"></i> QR พร้อมเพย์
+          </div>
+          <div class="qr-image-frame">
+            <div class="qr-loading" data-qr-loading>
+              <i data-lucide="loader-circle"></i>
+              <span>กำลังสร้าง QR Code...</span>
+            </div>
+            <img alt="คิวอาร์สำหรับชำระเงิน" class="qr-image" loading="eager" decoding="async" fetchpriority="high" data-qr-image hidden />
+            <div class="qr-unavailable" data-qr-unavailable hidden>ยังไม่พบ QR สำหรับช่องทางนี้</div>
+          </div>
+          <div class="olaf-checkout-qr-total">
+            <span>ยอดชำระทั้งหมด</span>
+            <strong class="qr-total-highlight" data-qr-total>฿0</strong>
+          </div>
+          <div class="qr-store-note" data-qr-note></div>
+          <div class="premium-actions">
+            <button class="primary-button submit-order-btn" type="button" data-qr-upload-slip-btn>
+              <i data-lucide="upload-cloud"></i>
+              <span>แนบสลิปการชำระเงิน</span>
+            </button>
+            <button class="secondary-button cancel-order-btn" type="button" data-qr-view-order-btn>ดูคำสั่งซื้อ</button>
+            <button class="text-button text-danger" type="button" data-qr-cancel-btn>ยกเลิกรายการ</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </dialog>
+<input type="file" id="rental-slip-input" accept="image/png,image/jpeg,image/webp" hidden>
+<link rel="stylesheet" href="olaf-ui.css?v=20261122-ui1" />
+</body></html>

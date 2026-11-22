@@ -1,0 +1,168 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "functions": {
+    "api/admin-supplier.js": {"maxDuration": 60,"includeFiles":"assets/supplier-steam-media-v18.json"},
+    "api/friend-image.js": {"maxDuration": 40},
+    "api/product-page.js": {"includeFiles": "product.html", "maxDuration": 15},
+    "api/sitemap.js": {"maxDuration": 60},
+    "api/free-games.js": {
+      "maxDuration": 15
+    },
+    "api/rank-image.js": {
+      "includeFiles": "Rank/**",
+      "maxDuration": 20
+    },
+    "api/profile-avatar.js": {
+      "includeFiles": "iconprofile/**",
+      "maxDuration": 20
+    },
+    "api/profile-shop.js": {
+      "includeFiles": "iconprofile/**",
+      "maxDuration": 40
+    },
+    "api/steam-app.js": {
+      "maxDuration": 20
+    },
+    "api/verify-slip.js": {
+      "maxDuration": 60
+    }
+  },
+  "redirects": [
+    {
+      "source": "/product.html",
+      "destination": "/product",
+      "permanent": false
+    },
+    {
+      "source": "/public-profile.html",
+      "destination": "/profile.html#user",
+      "permanent": false
+    },
+    {
+      "source": "/profie/user",
+      "destination": "/profile.html#user",
+      "permanent": false
+    },
+    {
+      "source": "/admin",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/admin/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/admin.html",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/olaf-control/",
+      "destination": "/olaf-control",
+      "permanent": false
+    },
+    {
+      "source": "/olaf-control.html",
+      "destination": "/olaf-control",
+      "permanent": false
+    },
+    {
+      "source": "/orders",
+      "destination": "/profile#inventory",
+      "permanent": false
+    },
+    {
+      "source": "/orders.html",
+      "destination": "/profile#inventory",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {"source":"/api/admin-user-password","destination":"/api/admin-supplier?adminRoute=user-password"},
+    {"source":"/api/admin-supplier-import","destination":"/api/admin-supplier?action=import"},
+    {"source":"/api/admin-supplier-test","destination":"/api/admin-supplier?action=test"},
+    {"source":"/sitemap.xml","destination":"/api/sitemap"},
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/olaf-control",
+      "destination": "/olaf-control.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/login.html"
+    },
+    {
+      "source": "/register",
+      "destination": "/register.html"
+    },
+    {
+      "source": "/profile",
+      "destination": "/profile.html"
+    },
+    {
+      "source": "/product",
+      "destination": "/api/product-page"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/olaf-control",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/olaf-control.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(js|css|json)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}
