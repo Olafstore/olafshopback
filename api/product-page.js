@@ -1,0 +1,30 @@
+import {readFileSync} from 'node:fs';
+import {getProducts,metadata,escape,fallbackImage} from '../lib/seo.js';
+import {createShopDb,uuid} from '../lib/suppliers/shop-db.js';
+import {publicSupplierProduct} from '../lib/suppliers/shop-service.js';
+const template=readFileSync(new URL('../product.html',import.meta.url),'utf8');
+export function renderProduct(product){
+ // SSR/preloads cannot know session age consent: never emit unchecked supplier artwork.
+ const restricted=String(product.id).startsWith('supplier-') || ['offline','steam-key'].includes(product.category) || /https:\/\/[^/]*steamstatic\.com\//.test(product.image_url||product.image||'') || product.ageRestricted===true || Number(product.requiredAge||product.required_age)>=18 || /18\s*\+|🔞|sexual content|nudity|adult only/i.test([product.name,...(product.tags||[])].join(' '));
+ const m=metadata(restricted?{...product,image:fallbackImage,image_url:fallbackImage,heroImage:fallbackImage,hero_image_url:fallbackImage}:product);
+ const skeleton=template.match(/<main id="product-page">([\s\S]*?)<\/main>/)?.[1]||'';
+ // Keep a real readable server summary when scripting is disabled or fails.
+ // The normal product renderer replaces the entire main when data is ready.
+ const loading='<style>.product-server-skeleton{display:none}html.product-loading .product-server-skeleton{display:block}html.product-loading .product-server-summary{display:none}@media(prefers-reduced-motion:reduce){.product-server-skeleton .skeleton-box,.product-server-skeleton .skeleton-box::after{animation:none!important}}</style><script>document.documentElement.classList.add("product-loading");setTimeout(function(){document.documentElement.classList.remove("product-loading")},12000);</script>';
+ return template.replace(/<title>[\s\S]*?<\/title>/i,m.html+loading).replace(/<main id="product-page">[\s\S]*?<\/main>/,`<main id="product-page"><div class="product-server-skeleton" role="status" aria-label="กำลังโหลดรายละเอียดสินค้า"><div aria-hidden="true">${skeleton}</div></div><section class="pd-layout product-server-summary" style="padding:32px"><div><h1>${escape(m.name)}</h1><img src="${escape(m.image)}" alt="${escape(m.name)}" style="max-width:100%;height:auto"><p>${escape(m.description)}</p><a href="/index.html#catalog">ดูเกมทั้งหมดในร้าน</a></div></section></main>`);
+}
+export default async function handler(req,res){
+ if(!['GET','HEAD'].includes(req.method)){res.setHeader('Allow','GET, HEAD');return res.status(405).end();}
+ res.setHeader('Content-Type','text/html; charset=utf-8');
+ const id=new URL(req.url,'https://olafshop.com').searchParams.get('id');
+ if(!id||id.length>180||/[\x00-\x1f\x7f/\\]/.test(id)){res.setHeader('X-Robots-Tag','noindex');return res.status(404).end('ไม่พบสินค้า');}
+ try{let product;
+ if(id.startsWith('supplier-')){
+   const key=id.slice(9);if(!uuid(key))return res.status(404).end('ไม่พบสินค้า');
+   const [row]=await createShopDb().select('supplier_products',{select:'id,supplier_product_id,name,description,image,stock,selling_price,full_price,denuvo,steam',id:`eq.${key}`,supplier:'eq.499k',product_type:'eq.offline',platform:'eq.steam',status:'eq.active',is_visible:'eq.true',selling_price:'gt.0',limit:'1'});
+   if(row)product={...publicSupplierProduct(row),id,category:'offline'};
+ }else [product]=await getProducts(id);
+ if(!product){res.setHeader('X-Robots-Tag','noindex');return res.status(404).end('ไม่พบสินค้า');}
+ res.setHeader('Cache-Control','public, max-age=0, s-maxage=300');return res.status(200).end(req.method==='HEAD'?'':renderProduct(product));
+ }catch{res.setHeader('Cache-Control','no-store');res.setHeader('Retry-After','60');return res.status(503).end('โหลดสินค้าไม่สำเร็จ กรุณาลองใหม่');}
+}
