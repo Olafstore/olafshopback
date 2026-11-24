@@ -1306,7 +1306,7 @@ function getLocalizedPlatformLabel(link = {}) {
 
 function productPlatformLinks(product = {}) {
   if(product.supplierProduct)return [
-    {label:'ติดต่อร้าน',url:'https://discord.gg/6axb2QbDHN',icon:'store',lockLabel:true},
+    {label:'ติดต่อร้าน',url:'https://www.facebook.com/olafshopv2/',icon:'store',lockLabel:true},
     {label:'คู่มือ',url:STEAM_OFFLINE_GUIDE_URL,icon:'book-open-check',lockLabel:true}
   ];
   if (String(product.category || "").toLowerCase() === "steam-account") {
@@ -1329,7 +1329,7 @@ function productPlatformLinks(product = {}) {
     return [
       {
         label: "Contace",
-        url: "https://discord.gg/6axb2QbDHN",
+        url: "https://www.facebook.com/olafshopv2/",
         icon: "store",
         lockLabel: true
       },
